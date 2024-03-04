@@ -49,7 +49,7 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Pop-up pro Sign Up -->
   <div class="popup" id="popupSignup">
-    <button class="signupClose" onclick="signup(true)">X</button>
+    <button class="popClose" onclick="signup(true)">X</button>
     <form id="signupForm" method="post" action="sign-up.php">
       <h2>Sign Up</h2>
       <input type="text" name="username" placeholder="Username" required>
@@ -63,7 +63,7 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Pop-up pro Login -->
   <div class="popup" id="popupLogin">
-    <button class="signupClose" onclick="login(true)">X</button>
+    <button class="popClose" onclick="login(true)">X</button>
     <form id="loginForm" method="post" action="login.php">
       <h2>Login</h2>
       <input type="email" name="email" placeholder="Email" required>
