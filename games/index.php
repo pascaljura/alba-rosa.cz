@@ -28,11 +28,11 @@
 
   <!-- Pop-up pro Sign Up -->
   <div class="popup" id="popupSignup">
-    <button class="signupClose" onclick="signup(true)">X</button>
+    <button class="popClose" onclick="signup(true)">X</button>
     <form id="signupForm">
       <input type="text" placeholder="Username" required>
       <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
+      <div id='pasdiv' class='pasdiv'><input type="password" placeholder="Password" id='signpas' required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img src='../assets/eye.png'></button></div>
       <input type="submit" class="submitbtn">
     </form>
     <button onclick="login()" class='svitch'>Login</button>
@@ -40,10 +40,10 @@
 
   <!-- Pop-up pro Login -->
   <div class="popup" id="popupLogin">
-    <button class="signupClose" onclick="login(true)">X</button>
+    <button class="popClose" onclick="login(true)">X</button>
     <form id="loginForm">
       <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
+      <div id='pasdiv' class='pasdiv'><input type="password" placeholder="Password" id='logpas' required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img src='../assets/eye.png' ></button></div>
       <input type="submit" class="submitbtn">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>

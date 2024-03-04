@@ -11,3 +11,8 @@ function login(close) {
   if (close) popup.style = 'display: none';
   else popup.style = 'display: flex';
 }
+
+function passhow(doc) {
+  if (doc.type == 'password') doc.type = 'text';
+  else doc.type = 'password';
+}
