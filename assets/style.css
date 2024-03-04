@@ -1,7 +1,7 @@
 /* style.css */
 
 /* Styling pro menu */
-ul {
+.navbar {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -39,9 +39,9 @@ li button:hover {
 .popup {
 	display: none;
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	top: 55px;
+	right: 8px;
+	width: 25%;
 	padding: 20px;
 	background: #fff;
 	border: 1px solid #ccc;
@@ -49,12 +49,16 @@ li button:hover {
 	z-index: 1000;
 }
 
-.popup button {
+.popup button,
+.popup input[type='submit'] {
 	background-color: #333;
 	color: #fff;
 	border: none;
 	padding: 10px;
 	cursor: pointer;
+	height: fit-content;
+	width: fit-content;
+	margin: 5px;
 }
 
 .popup form {
@@ -66,4 +70,11 @@ li button:hover {
 	padding: 10px;
 	margin-bottom: 10px;
 	box-sizing: border-box;
+}
+
+.svitch {
+	display: flex;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 }

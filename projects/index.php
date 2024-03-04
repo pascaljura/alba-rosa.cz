@@ -14,16 +14,16 @@
   <!-- Menu -->
   <ul class="navbar">
     <li><a href="../">Home</a></li>
-    <li><a href="../projects/">Projects</a></li>
-    <li><a href="#">GameHub</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="../games/">GameHub</a></li>
     <li><button onclick="signup()">Sign Up</button></li>
     <li><button onclick="login()">Login</button></li>
   </ul>
 
   <!-- Úvodní text -->
   <div>
-    <h1>Vítejte na GameHub!</h1>
-    <p>Zde můžete najít nejnovější hry.</p>
+    <h1>Vítejte na projects!</h1>
+    <p>Zde můžete najít nejnovější projekty.</p>
   </div>
 
   <!-- Pop-up pro Sign Up -->

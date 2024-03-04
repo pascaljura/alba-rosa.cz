@@ -12,7 +12,7 @@
 <body>
 
   <!-- Menu -->
-  <ul>
+  <ul class="navbar">
     <li><a href="#">Home</a></li>
     <li><a href="./projects/">Projects</a></li>
     <li><a href="./games/">GameHub</a></li>
@@ -26,11 +26,6 @@
     <p>Zde můžete najít nejnovější projekty a hry.</p>
   </div>
 
-  <!-- Tlačítka pro Sign Up a Login -->
-  <div>
-    
-  </div>
-
   <!-- Pop-up pro Sign Up -->
   <div class="popup" id="popupSignup">
     <button class="signupClose" onclick="signup(true)">X</button>
@@ -40,7 +35,7 @@
       <input type="password" placeholder="Password" required>
       <input type="submit" class="submitbtn">
     </form>
-    <button onclick="login()">Login</button>
+    <button onclick="login()" class='svitch'>Login</button>
   </div>
 
   <!-- Pop-up pro Login -->
@@ -51,11 +46,11 @@
       <input type="password" placeholder="Password" required>
       <input type="submit" class="submitbtn">
     </form>
-    <button onclick="signup()">Sign Up</button>
+    <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
-  <script src="script.js">
+  <script src="./assets/script.js">
     
   </script>
 
