@@ -16,6 +16,8 @@
     <li><a href="#">Home</a></li>
     <li><a href="./projects/">Projects</a></li>
     <li><a href="./games/">GameHub</a></li>
+    <li><button onclick="signup()">Sign Up</button></li>
+    <li><button onclick="login()">Login</button></li>
   </ul>
 
   <!-- Úvodní text -->
@@ -26,8 +28,7 @@
 
   <!-- Tlačítka pro Sign Up a Login -->
   <div>
-    <button onclick="signup()">Sign Up</button>
-    <button onclick="login()">Login</button>
+    
   </div>
 
   <!-- Pop-up pro Sign Up -->
