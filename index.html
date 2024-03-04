@@ -15,9 +15,35 @@
     <li><a href="#">Home</a></li>
     <li><a href="./projects/">Projects</a></li>
     <li><a href="./games/">GameHub</a></li>
-    <li><div onclick="signup()">sign up</div></li>
-    <li><div onclick="login()">login</div></li>
+    <li>
+      <div onclick="signup()">sign up</div>
+    </li>
+    <li>
+      <div onclick="login()">login</div>
+    </li>
   </ul>
+
+
+  <div class="popupSignup" id="popupSignup" style="display: none;">
+    <button class="signupClose" onclick="signup(true)">X</button>
+    <form id="signupForm">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="text" placeholder="username" required>
+      <input type="submit" class="submitbtn">
+    </form>
+    <button onclick="login()">login</button>
+  </div>
+
+  <div class="popupLogin" id="popupLogin" style="display: none;">
+    <button class="signupClose" onclick="login(true)">X</button>
+    <form id="loginForm">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="submit" class="submitbtn">
+    </form>
+    <button onclick="signup()">sign up</button>
+  </div>
 
   <script src="script.js">
     document.addEventListener('contextmenu', preventDefault);
