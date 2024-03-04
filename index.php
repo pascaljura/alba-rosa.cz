@@ -46,7 +46,7 @@ if (isset($_SESSION['user_id'])) {
 
   <div class="popup" id="popupSignup">
     <button class="signupClose" onclick="signup(true)">X</button>
-    <form id="signupForm" method="post" action="register.php">
+    <form id="signupForm" method="post" action="sign-up.php">
       <h2>Sign Up</h2>
       <input type="text" name="username" placeholder="Username" required>
       <input type="email" name="email" placeholder="Email" required>
@@ -59,17 +59,17 @@ if (isset($_SESSION['user_id'])) {
   <!-- Pop-up pro Login -->
   <div class="popup" id="popupLogin">
     <button class="signupClose" onclick="login(true)">X</button>
-    <form id="loginForm">
+    <form id="loginForm" method="post" action="login.php">
       <h2>Login</h2>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
       <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
-  <script src="script.js">
+  <script src="./assets/script.js">
 
   </script>
 

@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $lastUserId = $conn->insert_id;
 
         // Vložení dat do tabulky "purpix"
-        $insertPurpixQuery = "INSERT INTO purpix (user_id, username) VALUES ('$lastUserId', '$username')";
+        $insertPurpixQuery = "INSERT INTO purpix (users_id) VALUES ('$lastUserId')";
         
         if ($conn->query($insertPurpixQuery) === TRUE) {
             echo "success";
