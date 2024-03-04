@@ -47,13 +47,15 @@ if (isset($_SESSION['user_id'])) {
 
   </div>
 
+  <!-- Pop-up pro Sign Up -->
   <div class="popup" id="popupSignup">
-    <button class="signupClose" onclick="signup(true)">X</button>
+    <button class="popClose" onclick="signup(true)">X</button>
     <form id="signupForm" method="post" action="sign-up.php">
       <h2>Sign Up</h2>
       <input type="text" name="username" placeholder="Username" required>
       <input type="email" name="email" placeholder="Email" required>
       <input type="password" name="password" placeholder="Password" required>
+      <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas' required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img src='./assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Sign Up">
     </form>
     <button onclick="login()" class='svitch'>Login</button>
@@ -61,11 +63,11 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Pop-up pro Login -->
   <div class="popup" id="popupLogin">
-    <button class="signupClose" onclick="login(true)">X</button>
+    <button class="popClose" onclick="login(true)">X</button>
     <form id="loginForm" method="post" action="login.php">
       <h2>Login</h2>
       <input type="email" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Password" required>
+      <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas' required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img src='./assets/eye.png' ></button></div>
       <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>

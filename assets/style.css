@@ -53,16 +53,18 @@ li button:hover {
     z-index: 1000;
 }
 
-.popup button,
-.popup input[type='submit'] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    height: fit-content;
-    width: fit-content;
-    margin: 5px;
+.svitch,
+.popClose,
+.popup input[type='submit'],
+.svbtn {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	height: fit-content;
+	width: fit-content;
+	margin: 5px;
 }
 
 .popup form {
@@ -70,15 +72,34 @@ li button:hover {
 }
 
 .popup input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+	width: 20vw;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
 }
 
 .svitch {
-    display: flex;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+	display: flex;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.pasdiv {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 20vw;
+}
+
+.pasdiv input {
+	width: calc(20vw - 30px)
+}
+
+.swbtn {
+	width: auto;
+	height: 100%;
+}
+.swbtn img {
+	width: 30px;
+	height: auto;
 }
