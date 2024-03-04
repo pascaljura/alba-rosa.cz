@@ -49,7 +49,7 @@
     <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
 
-  <script src="./assets/script.js"></script>
+  <script src="../assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 
   </script>
