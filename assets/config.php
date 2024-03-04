@@ -7,9 +7,9 @@ $dbname = "alba";
 
 // Přístupové údaje k databázi
 //$servername = "md75.wedos.net";
-//$username = 'a237642_purpix';
-//$password = "DbEDmRSR";
-//$dbname = "d237642_purpix";
+//$username = 'a237642_alba';
+//$password = "af6nkV2W";
+//$dbname = "d237642_älba";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 $conn->set_charset("utf8");
