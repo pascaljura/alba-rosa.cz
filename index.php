@@ -53,24 +53,8 @@
   </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
-  <script>
-    function signup(close) {
-      var popup = document.getElementById('popupSignup');
-      if (close) {
-        popup.style.display = 'none';
-      } else {
-        popup.style.display = 'block';
-      }
-    }
-
-    function login(close) {
-      var popup = document.getElementById('popupLogin');
-      if (close) {
-        popup.style.display = 'none';
-      } else {
-        popup.style.display = 'block';
-      }
-    }
+  <script src="script.js">
+    
   </script>
 
 </body>
