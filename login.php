@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
             echo "success";
+            header("Location: index.php");
         } else {
             echo "Invalid password";
         }

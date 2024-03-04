@@ -6,7 +6,10 @@ if (isset($_SESSION['user_id'])) {
   // Uživatel je přihlášen, zobrazíte požadovaný obsah
   $username = $_SESSION['username'];
   echo "<h1>Vítejte, $username!</h1>";
-  // Zde můžete přidat další obsah nebo odkazy, které by byly viditelné pouze přihlášeným uživatelům
+  echo '
+<form id="logoutForm" method="post" action="logout.php">
+    <input type="submit" class="submitbtn" value="Logout">
+</form>';
   exit();
 }
 ?>
