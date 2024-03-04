@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = 'root';
 $password = "";
-$dbname = "albarosa";
+$dbname = "alba";
 
 // Přístupové údaje k databázi
 //$servername = "md75.wedos.net";
