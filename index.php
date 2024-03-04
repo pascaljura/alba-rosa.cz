@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+  // Uživatel je přihlášen, zobrazíte požadovaný obsah
+  $username = $_SESSION['username'];
+  echo "<h1>Vítejte, $username!</h1>";
+  // Zde můžete přidat další obsah nebo odkazy, které by byly viditelné pouze přihlášeným uživatelům
+  exit();
+}
+?>
+
+
 <html lang="en">
 
 <head>
@@ -26,14 +39,19 @@
     <p>Zde můžete najít nejnovější projekty a hry.</p>
   </div>
 
-  <!-- Pop-up pro Sign Up -->
+  <!-- Tlačítka pro Sign Up a Login -->
+  <div>
+
+  </div>
+
   <div class="popup" id="popupSignup">
     <button class="signupClose" onclick="signup(true)">X</button>
-    <form id="signupForm">
-      <input type="text" placeholder="Username" required>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <input type="submit" class="submitbtn">
+    <form id="signupForm" method="post" action="register.php">
+      <h2>Sign Up</h2>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" class="submitbtn" value="Sign Up">
     </form>
     <button onclick="login()" class='svitch'>Login</button>
   </div>
@@ -42,16 +60,17 @@
   <div class="popup" id="popupLogin">
     <button class="signupClose" onclick="login(true)">X</button>
     <form id="loginForm">
+      <h2>Login</h2>
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
-      <input type="submit" class="submitbtn">
+      <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
-  <script src="./assets/script.js">
-    
+  <script src="script.js">
+
   </script>
 
 </body>
