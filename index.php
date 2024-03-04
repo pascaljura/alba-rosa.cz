@@ -27,9 +27,9 @@
   <div class="popupSignup" id="popupSignup" style="display: none;">
     <button class="signupClose" onclick="signup(true)">X</button>
     <form id="signupForm">
+      <input type="text" placeholder="Username" required>
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
-      <input type="text" placeholder="username" required>
       <input type="submit" class="submitbtn">
     </form>
     <button onclick="login()">login</button>
