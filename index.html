@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="www.alba-rosa.cz/logo.png" type="icon">
+  <title>Alba-rosa.cz</title>
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="./projects/">Projects</a></li>
+    <li><a href="./games/">GameHub</a></li>
+    <li><div onclick="signup()">sign up</div></li>
+    <li><div onclick="login()">login</div></li>
+  </ul>
+
+  <script src="script.js">
+    document.addEventListener('contextmenu', preventDefault);
+    document.addEventListener('keydown', preventKeyCombination);
+    function preventDefault(e) {
+      e.preventDefault();
+    }
+
+    function preventKeyCombination(e) {
+      if (e.key === 'F12' || (e.ctrlKey && e.key === 'u')) {
+        e.preventDefault();
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
