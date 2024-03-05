@@ -1,4 +1,6 @@
-/* style.css */
+body {
+  font-family: "Arial", sans-serif;
+}
 
 /* Styling pro menu */
 .navbar {
