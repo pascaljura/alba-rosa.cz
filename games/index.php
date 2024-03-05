@@ -33,7 +33,6 @@
       <h2>Sign Up</h2>
       <input type="text" name="username" placeholder="Username" required>
       <input type="email" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Password" required>
       <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas'
           required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img
             src='../assets/eye.png'></button></div>
