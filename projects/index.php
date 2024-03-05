@@ -1,4 +1,49 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+  // Uživatel je přihlášen, zobrazíte požadovaný obsah
+  $username = $_SESSION['username'];
+  echo "";
+  echo '
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
+  <title>Alba-rosa.cz</title>
+</head>
+
+<body>
+
+  <!-- Menu -->
+  <ul class="navbar">
+    <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="../projects/" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
+    <li><a href="../games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><button onclick="location.href=\'../logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
+  </ul>
+
+  <!-- Úvodní text -->
+  <div>';
+  echo "
+    <h1>Vítejte, $username na Projects!</h1>";
+  echo ' <p>Zde můžete najít nejnovější projekty.</p>
+  </div>
+
+  <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
+  <script src="./assets/script.js"></script>
+  <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
+</body>
+</html>';
+  exit();
+}
+?>
+
+
 <html lang="en">
 
 <head>
@@ -24,6 +69,11 @@
   <div>
     <h1>Vítejte na projects!</h1>
     <p>Zde můžete najít nejnovější projekty.</p>
+  </div>
+
+  <!-- Tlačítka pro Sign Up a Login -->
+  <div>
+
   </div>
 
   <!-- Pop-up pro Sign Up -->
@@ -55,11 +105,25 @@
     <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
 
+  <div class="showcont">
+    <div class="show" id="projshow" onclick="window.location.replace('./projects/');">
+      <h2>Our projects!</h2>
+      <p>
+
+      </p>
+    </div>
+
+    <div class="show" id="gameshow" onclick="window.location.replace('./games/')">
+      <h2>Our games!</h2>
+      <p>
+
+      </p>
+    </div>
+  </div>
+
+  <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="../assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
-
-  </script>
-
 </body>
 
 </html>
