@@ -86,8 +86,9 @@ exit();
       <h2>Sign Up</h2>
       <input type="text" name="username" placeholder="Username" required>
       <input type="email" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas' required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img src='./assets/eye.png'></button></div>
+      <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas'
+          required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img
+            src='./assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Sign Up">
     </form>
     <button onclick="login()" class='svitch'>Login</button>
@@ -103,6 +104,20 @@ exit();
       <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>
+  </div>
+
+  <div class="show" id="projshow">
+    <h2>Our projects!</h2>
+    <p>
+
+    </p>
+  </div>
+
+  <div class="show" id="gameshow">
+    <h2>Our games!</h2>
+    <p>
+
+    </p>
   </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
