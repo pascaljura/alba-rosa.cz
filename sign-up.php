@@ -18,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($conn->query($insertPurpixQuery) === TRUE) {
             echo "success";
+            header("Location: index.php");
+            exit();
         } else {
             echo "Error inserting data into 'purpix' table: " . $conn->error;
         }

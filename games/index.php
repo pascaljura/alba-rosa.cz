@@ -104,6 +104,9 @@ if (isset($_SESSION['user_id'])) {
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
+  <div class="nolog" id="nolog">
+    <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
+  </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="../assets/script.js"></script>
