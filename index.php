@@ -29,11 +29,11 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Menu -->
   <ul class="navbar">
-      <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="./projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
-      <li><a href="./games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
-      <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
-      <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
+    <li><a href="./" class='active'><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="./projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
+    <li><a href="./games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
+    <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
 
   <!-- Úvodní text -->
@@ -54,8 +54,9 @@ if (isset($_SESSION['user_id'])) {
       <h2>Sign Up</h2>
       <input type="text" name="username" placeholder="Username" required>
       <input type="email" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas' required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img src='./assets/eye.png'></button></div>
+      <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas'
+          required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img
+            src='./assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Sign Up">
     </form>
     <button onclick="login()" class='svitch'>Login</button>
@@ -67,10 +68,26 @@ if (isset($_SESSION['user_id'])) {
     <form id="loginForm" method="post" action="login.php">
       <h2>Login</h2>
       <input type="email" name="email" placeholder="Email" required>
-      <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas' required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img src='./assets/eye.png' ></button></div>
+      <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas'
+          required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img
+            src='./assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>
+  </div>
+
+  <div class="show" id="projshow">
+    <h2>Our projects!</h2>
+    <p>
+
+    </p>
+  </div>
+
+  <div class="show" id="gameshow">
+    <h2>Our games!</h2>
+    <p>
+
+    </p>
   </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->

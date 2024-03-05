@@ -2,109 +2,130 @@
 
 /* Styling pro menu */
 .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
 li a {
-    float: left;
+  float: left;
 }
 
 li button {
-    background: none;
-    outline: none;
-    border: none;
-    float: right;
-    height: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  float: right;
+  height: 100%;
 }
 
 li a,
 li button {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
 }
 
 .active {
-    background-color: #111;
+  background-color: #111;
 }
 
 li a:hover,
 li button:hover {
-    background-color: #111;
+  background-color: #111;
 }
 
 .fas {
-    color: white;
+  color: white;
 }
 
 /* Styling pro pop-up */
 .popup {
-    display: none;
-    position: fixed;
-    top: 55px;
-    right: 8px;
-    width: 25%;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  top: 55px;
+  right: 8px;
+  width: 25%;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .svitch,
 .popClose,
 .popup input[type='submit'],
 .svbtn {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    height: fit-content;
-    width: fit-content;
-    margin: 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+  margin: 5px;
 }
 
 .popup form {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .popup input {
-    width: 20vw;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+  width: 20vw;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 .svitch {
-    display: flex;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .pasdiv {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 20vw;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 20vw;
 }
 
 .pasdiv input {
-    width: calc(20vw - 30px)
+  width: calc(20vw - 30px)
 }
 
 .swbtn {
-    width: auto;
-    height: 100%;
+  width: auto;
+  height: 100%;
 }
 
 .swbtn img {
-    width: 30px;
-    height: auto;
+  width: 30px;
+  height: auto;
+}
+
+.popClose {
+  position: absolute;
+  right: 10%;
+  top: 5%;
+}
+
+.show {
+  position: flex;
+  width: 25%;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.2s ease-in;
+}
+
+.show:hover {
+  background-color: #ddd;
 }
