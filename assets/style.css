@@ -44,8 +44,11 @@ li button:hover {
 
 .fas {
   color: white;
+  padding: 2px;
+}.fa-solid, .fa-regular {
+  color: #000000;
+  padding: 2px;
 }
-
 /* Styling pro pop-up */
 .popup {
   display: none;
@@ -126,15 +129,19 @@ li button:hover {
   border-radius: 5px;
   transition: background-color 0.2s ease-in;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .show:hover {
   background-color: #ddd;
+  cursor: pointer;
 }
 
 .showcont {
   display: flex;
   justify-content: space-evenly;
+
 }
 
 .nolog {

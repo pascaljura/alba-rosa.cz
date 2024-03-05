@@ -36,7 +36,7 @@ if (isset($_SESSION['user_id'])) {
   echo '<div class="showcont">';
   echo '  <div class="show" id="projshow" onclick="window.open(\'../tictactoe\');">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
-  echo '    <h2>Tic Tac Toe!</h2>';
+  echo '    <h2> Tic Tac Toe!</h2>';
   echo '    <p>';
   echo '    </p>';
   echo '  </div>';
@@ -48,7 +48,7 @@ if (isset($_SESSION['user_id'])) {
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../popclicker/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
-  echo '    <h2>Popclicker!</h2>';
+  echo '    <h2> Popclicker!</h2>';
   echo '    <p>';
   echo '    </p>';
   echo '  </div>';

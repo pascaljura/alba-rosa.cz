@@ -35,13 +35,13 @@ if (isset($_SESSION['user_id'])) {
   </div>';
   echo '<div class="showcont">';
   echo '  <div class="show" id="projshow" onclick="window.location.replace(\'./projects/\');">';
-  echo '    <h2>Our projects!</h2>';
+  echo '    <h2><i class="fa-regular fa-folder"></i>Our projects!</h2>';
   echo '    <p>';
   echo '    </p>';
   echo '  </div>';
   
   echo '  <div class="show" id="gameshow" onclick="window.location.replace(\'./games/\')">';
-  echo '    <h2>Our games!</h2>';
+  echo '    <h2><i class="fa-regular fa-folder"></i>Our games!</h2>';
   echo '    <p>';
   echo '    </p>';
   echo '  </div>';
