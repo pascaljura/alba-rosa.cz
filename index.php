@@ -5,12 +5,8 @@ session_start();
 if (isset($_SESSION['user_id'])) {
   // Uživatel je přihlášen, zobrazíte požadovaný obsah
   $username = $_SESSION['username'];
-  echo "<h1>Vítejte, $username!</h1>";
+  echo "";
   echo '
-<form id="logoutForm" method="post" action="logout.php">
-    <input type="submit" class="submitbtn" value="Logout">
-</form>';
-echo '
 <html lang="en">
 
 <head>
@@ -28,13 +24,14 @@ echo '
     <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="./projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
     <li><a href="./games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
-    <li><button onclick="location.href=\'logout.php\'"><i class="fas fa-sign-in-alt"></i>Logout</button></li>
+    <li><button onclick="location.href=\'logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
   </ul>
 
   <!-- Úvodní text -->
-  <div>
-    <h1>Vítejte na našem webu!</h1>
-    <p>Zde můžete najít nejnovější projekty a hry.</p>
+  <div>';
+  echo "
+    <h1>Vítejte, $username na našem webu!</h1>";
+  echo ' <p>Zde můžete najít nejnovější projekty a hry.</p>
   </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
@@ -42,7 +39,7 @@ echo '
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 </html>';
-exit();
+  exit();
 }
 ?>
 
@@ -61,11 +58,11 @@ exit();
 
   <!-- Menu -->
   <ul class="navbar">
-      <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="./projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
-      <li><a href="./games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
-      <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
-      <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
+    <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="./projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
+    <li><a href="./games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
+    <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
 
   <!-- Úvodní text -->
@@ -100,7 +97,9 @@ exit();
     <form id="loginForm" method="post" action="login.php">
       <h2>Login</h2>
       <input type="email" name="email" placeholder="Email" required>
-      <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas' required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img src='./assets/eye.png' ></button></div>
+      <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas'
+          required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img
+            src='./assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>
