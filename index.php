@@ -32,8 +32,20 @@ if (isset($_SESSION['user_id'])) {
   echo "
     <h1>Vítejte, $username na našem webu!</h1>";
   echo ' <p>Zde můžete najít nejnovější projekty a hry.</p>
-  </div>
-
+  </div>';
+  echo '<div class="showcont">';
+  echo '  <div class="show" id="projshow" onclick="window.location.replace(\'./projects/\');">';
+  echo '    <h2>Our projects!</h2>';
+  echo '    <p>';
+  echo '    </p>';
+  echo '  </div>';
+  
+  echo '  <div class="show" id="gameshow" onclick="window.location.replace(\'./games/\')">';
+  echo '    <h2>Our games!</h2>';
+  echo '    <p>';
+  echo '    </p>';
+  echo '  </div>';
+  echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
@@ -103,22 +115,6 @@ if (isset($_SESSION['user_id'])) {
       <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>
-  </div>
-
-  <div class="showcont">
-    <div class="show" id="projshow" onclick="window.location.replace('./projects/');">
-      <h2>Our projects!</h2>
-      <p>
-
-      </p>
-    </div>
-
-    <div class="show" id="gameshow" onclick="window.location.replace('./games/')">
-      <h2>Our games!</h2>
-      <p>
-
-      </p>
-    </div>
   </div>
 
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
