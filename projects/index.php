@@ -29,7 +29,7 @@
   <!-- Pop-up pro Sign Up -->
   <div class="popup" id="popupSignup">
     <button class="popClose" onclick="signup(true)">X</button>
-    <form id="signupForm" method="post" action="sign-up.php">
+    <form id="signupForm" method="post" action="../sign-up.php">
       <h2>Sign Up</h2>
       <input type="text" name="username" placeholder="Username" required>
       <input type="email" name="email" placeholder="Email" required>
@@ -45,7 +45,7 @@
   <!-- Pop-up pro Login -->
   <div class="popup" id="popupLogin">
     <button class="popClose" onclick="login(true)">X</button>
-    <form id="loginForm" method="post" action="login.php">
+    <form id="loginForm" method="post" action="../login.php">
       <h2>Login</h2>
       <input type="email" name="email" placeholder="Email" required>
       <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas'
