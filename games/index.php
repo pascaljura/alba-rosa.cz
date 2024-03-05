@@ -32,8 +32,27 @@ if (isset($_SESSION['user_id'])) {
   echo "
     <h1>Vítejte, $username na GameHub!</h1>";
   echo ' <p>Zde můžete najít nejnovější hry.</p>
-  </div>
-
+  </div>';
+  echo '<div class="showcont">';
+  echo '  <div class="show" id="projshow" onclick="window.open(\'../tictactoe\');">';
+  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
+  echo '    <h2>Tic Tac Toe!</h2>';
+  echo '    <p>';
+  echo '    </p>';
+  echo '  </div>';
+  echo '  <div class="show" id="gameshow" onclick="window.open(\'../purpix/\')">';
+  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
+  echo '    <h2>Purpix!</h2>';
+  echo '    <p>';
+  echo '    </p>';
+  echo '  </div>';
+  echo '  <div class="show" id="gameshow" onclick="window.open(\'../popclicker/\')">';
+  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
+  echo '    <h2>Popclicker!</h2>';
+  echo '    <p>';
+  echo '    </p>';
+  echo '  </div>';
+  echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>

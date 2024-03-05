@@ -32,8 +32,27 @@ if (isset($_SESSION['user_id'])) {
   echo "
     <h1>Vítejte, $username na Projects!</h1>";
   echo ' <p>Zde můžete najít nejnovější projekty.</p>
-  </div>
-
+  </div>';
+  echo '<div class="showcont">';
+  echo '  <div class="show" id="projshow" onclick="window.open(\'../bezier/\');">';
+  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
+  echo "    <h2>Bezier's curve!</h2>";
+  echo '    <p>';
+  echo '    </p>';
+  echo '  </div>';
+  echo '  <div class="show" id="gameshow" onclick="window.open(\'../parlament/\')">';
+  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
+  echo '    <h2>Parlament!</h2>';
+  echo '    <p>';
+  echo '    </p>';
+  echo '  </div>';
+  echo '  <div class="show" id="gameshow" onclick="window.open(\'../qr/\')">';
+  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
+  echo '    <h2>Qr code!</h2>';
+  echo '    <p>';
+  echo '    </p>';
+  echo '  </div>';
+  echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
