@@ -30,6 +30,10 @@ li button {
     text-decoration: none;
 }
 
+.active {
+    background-color: #111;
+}
+
 li a:hover,
 li button:hover {
     background-color: #111;
@@ -57,14 +61,14 @@ li button:hover {
 .popClose,
 .popup input[type='submit'],
 .svbtn {
-	background-color: #333;
-	color: #fff;
-	border: none;
-	padding: 10px;
-	cursor: pointer;
-	height: fit-content;
-	width: fit-content;
-	margin: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
 }
 
 .popup form {
@@ -72,34 +76,35 @@ li button:hover {
 }
 
 .popup input {
-	width: 20vw;
-	padding: 10px;
-	margin-bottom: 10px;
-	box-sizing: border-box;
+    width: 20vw;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .svitch {
-	display: flex;
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 .pasdiv {
-	display: flex;
-	flex-wrap: nowrap;
-	width: 20vw;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 20vw;
 }
 
 .pasdiv input {
-	width: calc(20vw - 30px)
+    width: calc(20vw - 30px)
 }
 
 .swbtn {
-	width: auto;
-	height: 100%;
+    width: auto;
+    height: 100%;
 }
+
 .swbtn img {
-	width: 30px;
-	height: auto;
+    width: 30px;
+    height: auto;
 }

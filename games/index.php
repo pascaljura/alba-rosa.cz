@@ -15,7 +15,7 @@
   <ul class="navbar">
     <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="../projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><a href="../games/" class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
