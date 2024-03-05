@@ -36,7 +36,7 @@
       <input type="password" name="password" placeholder="Password" required>
       <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas'
           required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img
-            src='./assets/eye.png'></button></div>
+            src='../assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Sign Up">
     </form>
     <button onclick="login()" class='svitch'>Login</button>
@@ -50,7 +50,7 @@
       <input type="email" name="email" placeholder="Email" required>
       <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas'
           required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img
-            src='./assets/eye.png'></button></div>
+            src='../assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>

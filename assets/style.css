@@ -117,15 +117,20 @@ li button:hover {
 }
 
 .show {
-  position: flex;
+  display: flex;
   width: 25%;
   height: auto;
   border: 1px solid black;
   border-radius: 5px;
-  text-align: center;
   transition: background-color 0.2s ease-in;
+  justify-content: center;
 }
 
 .show:hover {
   background-color: #ddd;
+}
+
+.showcont {
+  display: flex;
+  justify-content: space-evenly;
 }
