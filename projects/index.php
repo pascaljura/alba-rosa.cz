@@ -67,7 +67,7 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Úvodní text -->
   <div>
-    <h1>Vítejte na projects!</h1>
+    <h1>Vítejte na Projects!</h1>
     <p>Zde můžete najít nejnovější projekty.</p>
   </div>
 
