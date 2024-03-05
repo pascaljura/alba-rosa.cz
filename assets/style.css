@@ -134,3 +134,14 @@ li button:hover {
   display: flex;
   justify-content: space-evenly;
 }
+
+.nolog {
+  font-size: 200%;
+  border: 2px solid #ff0015;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  background-color: #fe6e7a;
+}

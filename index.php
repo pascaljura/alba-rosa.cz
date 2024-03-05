@@ -117,6 +117,26 @@ if (isset($_SESSION['user_id'])) {
     <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
 
+  <div class="showcont" style="display: none;">
+    <div class="show" id="projshow" onclick="window.location.replace('./projects/');">
+      <h2>Our projects!</h2>
+      <p>
+
+      </p>
+    </div>
+
+    <div class="show" id="gameshow" onclick="window.location.replace('./games/')">
+      <h2>Our games!</h2>
+      <p>
+
+      </p>
+    </div>
+  </div>
+
+  <div class="nolog" id="nolog">
+    <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
+  </div>
+
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
