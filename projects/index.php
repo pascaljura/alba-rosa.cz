@@ -66,6 +66,7 @@ if (isset($_SESSION['user_id'])) {
       echo '<p>Sorry, you don\'t have access :D</p>';
   }
   echo '
+  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
@@ -138,7 +139,7 @@ if (isset($_SESSION['user_id'])) {
   <div class="nolog" id="nolog">
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
   </div>
-
+  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="../assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>

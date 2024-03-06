@@ -41,7 +41,7 @@ if (isset($_SESSION['user_id'])) {
       <h>Unleash your creativity with our projects.</h>
     </div>
   </div>';
-    echo '
+  echo '
   <div class="show" id="projshow" onclick="window.open(\'./gamehub/\');">
     <div class="button-text">
       <h2><i class="fa-regular fa-folder"></i>Our GameHub!</h2>
@@ -52,6 +52,7 @@ if (isset($_SESSION['user_id'])) {
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
+  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
 </body>
 </html>';
   exit();
@@ -123,7 +124,9 @@ if (isset($_SESSION['user_id'])) {
   <div class="nolog" id="nolog">
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
   </div>
-
+  <footer>
+    <p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p>
+  </footer>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>

@@ -207,6 +207,20 @@ p {
   border-radius: 8px;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 20%;  
+  width: 50%;
+  margin: 30px;
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #007acc;
+  border-radius: 8px;
+  position: bottom;
+}
+
 @media (max-width: 600px) {
 
   li a,
