@@ -30,8 +30,8 @@ if (isset($_SESSION['user_id'])) {
   <!-- Úvodní text -->
   <div>';
   echo "
-    <h1>Vítejte, $username na našem webu!</h1>";
-  echo ' <p>Zde můžete najít nejnovější projekty a hry.</p>
+    <h1>Welcome to our website, $username!</h1>";
+  echo ' <p>Here you can find the latest projects and games.</p>
   </div>';
   echo '<div class="showcont">';
   echo '
@@ -82,7 +82,7 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Úvodní text -->
   <div>
-    <h1>Vítejte na našem webu!</h1>
+    <h1>Welcome to our website!</h1>
     <p>Zde můžete najít nejnovější projekty a hry.</p>
   </div>
 

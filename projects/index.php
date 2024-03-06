@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
+include('../assets/config.php');
 if (isset($_SESSION['user_id'])) {
-  // Uživatel je přihlášen, zobrazíte požadovaný obsah
+  $user_id = $_SESSION['user_id'];
   $username = $_SESSION['username'];
-  echo "";
+  $query = "SELECT project_access FROM users WHERE id = $user_id";
+  $result = $conn->query($query);
+  if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $project_access = $row['project_access'];
+  } else {
+    $project_access = 0;
+  }
+  $conn->close();
   echo '
 <html lang="en">
 
@@ -18,44 +26,46 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-
-  <!-- Menu -->
   <ul class="navbar">
     <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
     <li><a href="../projects/" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
     <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="location.href=\'../logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
   </ul>
-
   <!-- Úvodní text -->
   <div>';
   echo "
-    <h1>Vítejte, $username na Projects!</h1>";
-  echo ' <p>Zde můžete najít nejnovější projekty.</p>
-  </div>';
-  echo '<div class="showcont">';
+    <h1>Welcome to Projects, $username!</h1>";
+    if ($project_access == 1) {
+      echo '<p>Here you can find the latest projects.</p>';
+      echo '<div class="showcont">';
+      
+      echo '<div class="show" id="projshow" onclick="window.open(\'../bezier/\');">
+              <div class="button-text">
+                  <h2><i class="fa-solid fa-up-right-from-square"></i>Bezier\'s curve!</h2>
+                  <p>A simple program to calculate a bezier\'s curve with unlimited points.</p>
+              </div>
+            </div>';
+            
+      echo '<div class="show" id="projshow" onclick="window.open(\'../parlament/\');">
+              <div class="button-text">
+                  <h2><i class="fa-solid fa-up-right-from-square"></i>Parlament!</h2>
+                  <p>Exclusive site for our school parliament to store all records.</p>
+              </div>
+            </div>';
+            
+      echo '<div class="show" id="projshow" onclick="window.open(\'../qr/\');">
+              <div class="button-text">
+                  <h2><i class="fa-solid fa-up-right-from-square"></i>Qr code!</h2>
+                  <p>A simple QR code generator for all of your needs.</p>
+              </div>
+            </div>';
+            
+      echo '</div>';
+  } else {
+      echo '<p>Sorry, you don\'t have access :D</p>';
+  }
   echo '
-  <div class="show" id="projshow" onclick="window.open(\'../bezier/\');">
-    <div class="button-text">';
-  echo "      <h2><i class='fa-solid fa-up-right-from-square'></i>Bezier's curve!</h2>";
-  echo "      <h>A simple program to calculate a bezier's curve with unlimited points.</h>";
-  echo '  </div>
-  </div>';
-  echo '
-  <div class="show" id="projshow" onclick="window.open(\'../parlament/\');">
-    <div class="button-text">
-      <h2><i class="fa-solid fa-up-right-from-square"></i>Parlament!</h2>
-      <h>Exclusive site for our school parlament to store all records.</h>
-    </div>
-  </div>';
-  echo '
-  <div class="show" id="projshow" onclick="window.open(\'../qr/\');">
-    <div class="button-text">
-      <h2><i class="fa-solid fa-up-right-from-square"></i>Qr code!</h2>
-      <h>A simple QR code generator for all of your needs.</h>
-    </div>
-  </div>';
-  echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
@@ -88,8 +98,8 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Úvodní text -->
   <div>
-    <h1>Vítejte na Projects!</h1>
-    <p>Zde můžete najít nejnovější projekty.</p>
+    <h1>Welcome to Projects!</h1>
+    <p>Here you can find the latest projects.</p>
   </div>
 
   <!-- Tlačítka pro Sign Up a Login -->

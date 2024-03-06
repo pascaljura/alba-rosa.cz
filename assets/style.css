@@ -64,6 +64,10 @@ h1 {
   color: #007acc;
 }
 
+h2 {
+  margin-left: 10px;
+}
+
 /* Styling pro <p> */
 p {
   color: #333;
@@ -156,6 +160,7 @@ p {
   transition: background-color 0.2s ease-in;
   background-color: #ffffff;
   margin: 5px;
+  padding: auto;
 }
 
 .show:hover {
@@ -200,4 +205,31 @@ p {
   justify-self: center;
   background-color: #fe6e7a;
   border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+
+  li a,
+  li button {
+    padding: 10px;
+  }
+
+  h1,
+  h2,
+  p {
+    margin-left: 5px;
+  }
+
+  .popup {
+    width: 80%;
+  }
+
+  .popup input {
+    width: 100%;
+  }
+
+  .pasdiv,
+  .button-text {
+    width: 100%;
+  }
 }
