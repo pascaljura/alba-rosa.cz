@@ -23,7 +23,7 @@ if (isset($_SESSION['user_id'])) {
   <ul class="navbar">
     <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
     <li><a href="../projects/" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="location.href=\'../logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
   </ul>
 
@@ -34,24 +34,27 @@ if (isset($_SESSION['user_id'])) {
   echo ' <p>Zde můžete najít nejnovější projekty.</p>
   </div>';
   echo '<div class="showcont">';
-  echo '  <div class="show" id="projshow" onclick="window.open(\'../bezier/\');">';
-  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
-  echo "    <h2>Bezier's curve!</h2>";
-  echo "    <h>A simple program to calculate a bezier's curve with unlimited points.";
-  echo '    </h>';
-  echo '  </div>';
-  echo '  <div class="show" id="gameshow" onclick="window.open(\'../parlament/\')">';
-  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
-  echo '    <h2>Parlament!</h2>';
-  echo '    <h>Exclusive site for our school parlament to store all records.';
-  echo '    </h>';
-  echo '  </div>';
-  echo '  <div class="show" id="gameshow" onclick="window.open(\'../qr/\')">';
-  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
-  echo '    <h2>Qr code!</h2>';
-  echo '    <h>A simple QR code generator for all of your needs.';
-  echo '    </h>';
-  echo '  </div>';
+  echo '
+  <div class="show" id="projshow" onclick="window.open(\'../bezier/\');">
+    <div class="button-text">';
+  echo "      <h2><i class='fa-solid fa-up-right-from-square'></i>Bezier's curve!</h2>";
+  echo "      <h>A simple program to calculate a bezier's curve with unlimited points.</h>";
+  echo '  </div>
+  </div>';
+  echo '
+  <div class="show" id="projshow" onclick="window.open(\'../parlament/\');">
+    <div class="button-text">
+      <h2><i class="fa-solid fa-up-right-from-square"></i>Parlament!</h2>
+      <h>Exclusive site for our school parlament to store all records.</h>
+    </div>
+  </div>';
+  echo '
+  <div class="show" id="projshow" onclick="window.open(\'../qr/\');">
+    <div class="button-text">
+      <h2><i class="fa-solid fa-up-right-from-square"></i>Qr code!</h2>
+      <h>A simple QR code generator for all of your needs.</h>
+    </div>
+  </div>';
   echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
@@ -78,7 +81,7 @@ if (isset($_SESSION['user_id'])) {
   <ul class="navbar">
     <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="../projects/" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>

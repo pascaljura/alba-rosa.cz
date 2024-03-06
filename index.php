@@ -23,7 +23,7 @@ if (isset($_SESSION['user_id'])) {
   <ul class="navbar">
     <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="./projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="./games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><a href="./gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="location.href=\'logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
   </ul>
 
@@ -34,17 +34,20 @@ if (isset($_SESSION['user_id'])) {
   echo ' <p>Zde můžete najít nejnovější projekty a hry.</p>
   </div>';
   echo '<div class="showcont">';
-  echo '  <div class="show" id="projshow" onclick="window.location.replace(\'./projects/\');">';
-  echo '    <h2><i class="fa-regular fa-folder"></i>Our projects!</h2>';
-  echo '    <p>';
-  echo '    </p>';
-  echo '  </div>';
-  
-  echo '  <div class="show" id="gameshow" onclick="window.location.replace(\'./games/\')">';
-  echo '    <h2><i class="fa-regular fa-folder"></i>Our games!</h2>';
-  echo '    <p>';
-  echo '    </p>';
-  echo '  </div>';
+  echo '
+  <div class="show" id="projshow" onclick="window.open(\'./projects/\');">
+    <div class="button-text">
+      <h2><i class="fa-regular fa-folder"></i>Our Projects!</h2>
+      <h>Unleash your creativity with our projects.</h>
+    </div>
+  </div>';
+    echo '
+  <div class="show" id="projshow" onclick="window.open(\'./gamehub/\');">
+    <div class="button-text">
+      <h2><i class="fa-regular fa-folder"></i>Our GameHub!</h2>
+      <h>Immerse yourself in our captivating game collection.</h>
+    </div>
+  </div>';
   echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="./assets/script.js"></script>
@@ -72,7 +75,7 @@ if (isset($_SESSION['user_id'])) {
   <ul class="navbar">
     <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="./projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="./games/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><a href="./gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>

@@ -57,6 +57,7 @@ li button:hover {
 .fa-regular {
   padding: 2px;
 }
+
 /* Styling pro <h1> */
 h1 {
   margin-left: 10px;
@@ -149,20 +150,38 @@ p {
   display: flex;
   width: 25%;
   height: auto;
-  border: 1px solid #007acc;
   border-radius: 8px;
+  padding: 10px;
+  box-shadow: #00578b 5px 10px;
   transition: background-color 0.2s ease-in;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   background-color: #ffffff;
-  margin: 10px;
+  margin: 5px;
 }
 
 .show:hover {
   background-color: #007acc;
+  box-shadow: #00578b 5px 10px;
   color: white;
   cursor: pointer;
+}
+
+.button-text {
+  margin-left: 10px;
+  /* Prostor mezi ikonou a textem */
+}
+
+.button-text h2 {
+  font-size: 1.5em;
+  /* Velikost nadpisu */
+  margin-bottom: 5px;
+  /* Mezera pod nadpisem */
+}
+
+.button-text p {
+  font-size: 1em;
+  /* Velikost popisku */
+  color: #555;
+  /* Barva popisku */
 }
 
 .showcont {

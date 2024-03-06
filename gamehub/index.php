@@ -23,7 +23,7 @@ if (isset($_SESSION['user_id'])) {
   <ul class="navbar">
     <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
     <li><a href="../projects/" ><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../games/" class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><a href="../gamehub/" class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="location.href=\'../logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
   </ul>
 
@@ -34,24 +34,27 @@ if (isset($_SESSION['user_id'])) {
   echo ' <p>Zde můžete najít nejnovější hry.</p>
   </div>';
   echo '<div class="showcont">';
-  echo '  <div class="show" id="projshow" onclick="window.open(\'../tictactoe\');">';
-  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
-  echo '    <h2> Tic Tac Toe!</h2>';
-  echo '    <h>Basic Tic Tac Toe game with changeable size of grid.';
-  echo '    </h>';
-  echo '  </div>';
-  echo '  <div class="show" id="gameshow" onclick="window.open(\'../purpix/\')">';
-  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
-  echo '    <h2>Purpix!</h2>';
-  echo '    <h>If you like semi-coding you can try this one.';
-  echo '    </h>';
-  echo '  </div>';
-  echo '  <div class="show" id="gameshow" onclick="window.open(\'../popclicker/\')">';
-  echo '    <i class="fa-solid fa-up-right-from-square"></i>';
-  echo '    <h2> Popclicker!</h2>';
-  echo '    <h>You know cookie clicker? Try this one with our own characters.';
-  echo '    </h>';
-  echo '  </div>';
+  echo '
+<div class="show" id="projshow" onclick="window.open(\'../tictactoe/\');">
+  <div class="button-text">
+    <h2><i class="fa-solid fa-up-right-from-square"></i>Tic Tac Toe!</h2>
+    <h>Basic Tic Tac Toe game with changeable size of grid.</h>
+  </div>
+</div>';
+  echo '
+<div class="show" id="projshow" onclick="window.open(\'../purpix/\');">
+  <div class="button-text">
+    <h2><i class="fa-solid fa-up-right-from-square"></i>Purpix!</h2>
+    <h>If you like semi-coding you can try this one.</h>
+  </div>
+</div>';
+  echo '
+<div class="show" id="projshow" onclick="window.open(\'../popclicker/\');">
+  <div class="button-text">
+    <h2><i class="fa-solid fa-up-right-from-square"></i>Popclicker!</h2>
+    <h>You know cookie clicker? Try this one with our own characters.</h>
+  </div>
+</div>';
   echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
@@ -78,7 +81,7 @@ if (isset($_SESSION['user_id'])) {
   <ul class="navbar">
     <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="../projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../games/" class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
+    <li><a href="../gamehub/" class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
