@@ -37,19 +37,19 @@ if (isset($_SESSION['user_id'])) {
   echo '  <div class="show" id="projshow" onclick="window.open(\'../tictactoe\');">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2> Tic Tac Toe!</h2>';
-  echo '    <p>';
+  echo '    <p>Basic Tic Tac Toe game with changeable size of grid.';
   echo '    </p>';
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../purpix/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2>Purpix!</h2>';
-  echo '    <p>';
+  echo '    <p>If you like semi-coding you can try this one.';
   echo '    </p>';
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../popclicker/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2> Popclicker!</h2>';
-  echo '    <p>';
+  echo '    <p>You know cookie clicker? Try this one with our own characters.';
   echo '    </p>';
   echo '  </div>';
   echo '</div>

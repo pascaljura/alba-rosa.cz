@@ -37,19 +37,19 @@ if (isset($_SESSION['user_id'])) {
   echo '  <div class="show" id="projshow" onclick="window.open(\'../bezier/\');">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo "    <h2>Bezier's curve!</h2>";
-  echo '    <p>';
+  echo "    <p>A simple program to calculate a bezier's curve with unlimited points.";
   echo '    </p>';
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../parlament/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2>Parlament!</h2>';
-  echo '    <p>';
+  echo '    <p>Exclusive site for our school parlament to store all records.';
   echo '    </p>';
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../qr/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2>Qr code!</h2>';
-  echo '    <p>';
+  echo '    <p>A simple QR code generator for all of your needs.';
   echo '    </p>';
   echo '  </div>';
   echo '</div>
