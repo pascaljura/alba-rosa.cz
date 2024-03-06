@@ -1,14 +1,18 @@
 body {
   font-family: "Arial", sans-serif;
+  background-color: #f2f7ff;
+  margin: 10;
+  padding: 0;
 }
 
 /* Styling pro menu */
 .navbar {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+  padding: 10px;
   overflow: hidden;
-  background-color: #333;
+  background-color: #007acc;
+  border-radius: 8px;
 }
 
 li a {
@@ -28,27 +32,43 @@ li button {
   display: block;
   color: white;
   text-align: center;
+  margin: 2px;
   padding: 14px 16px;
   text-decoration: none;
   transition: background-color 0.2s ease-in;
+  border-radius: 8px;
 }
 
 .active {
-  background-color: #111;
+  background-color: #00578b;
 }
 
 li a:hover,
 li button:hover {
-  background-color: #111;
+  background-color: #00578b;
 }
 
 .fas {
   color: white;
   padding: 2px;
-}.fa-solid, .fa-regular {
-  color: #000000;
+}
+
+.fa-solid,
+.fa-regular {
   padding: 2px;
 }
+/* Styling pro <h1> */
+h1 {
+  margin-left: 10px;
+  color: #007acc;
+}
+
+/* Styling pro <p> */
+p {
+  color: #333;
+  margin: 0 10px;
+}
+
 /* Styling pro pop-up */
 .popup {
   display: none;
@@ -57,24 +77,26 @@ li button:hover {
   right: 8px;
   width: 25%;
   padding: 20px;
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  border-radius: 8px;
 }
 
 .svitch,
 .popClose,
 .popup input[type='submit'],
 .svbtn {
-  background-color: #333;
-  color: #fff;
+  background-color: #007acc;
+  color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
   height: fit-content;
   width: fit-content;
   margin: 5px;
+  border-radius: 5px;
 }
 
 .popup form {
@@ -82,7 +104,7 @@ li button:hover {
 }
 
 .popup input {
-  width: 20vw;
+  width: 80%;
   padding: 10px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -98,16 +120,17 @@ li button:hover {
 .pasdiv {
   display: flex;
   flex-wrap: nowrap;
-  width: 20vw;
+  width: 80%;
 }
 
 .pasdiv input {
-  width: calc(20vw - 30px)
+  width: calc(80% - 30px);
 }
 
 .swbtn {
   width: auto;
   height: 100%;
+  border-radius: 5px;
 }
 
 .swbtn img {
@@ -119,38 +142,43 @@ li button:hover {
   position: absolute;
   right: 10%;
   top: 5%;
+  border-radius: 5px;
 }
 
 .show {
   display: flex;
   width: 25%;
   height: auto;
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 1px solid #007acc;
+  border-radius: 8px;
   transition: background-color 0.2s ease-in;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #ffffff;
+  margin: 10px;
 }
 
 .show:hover {
-  background-color: #ddd;
+  background-color: #007acc;
+  color: white;
   cursor: pointer;
 }
 
 .showcont {
   display: flex;
   justify-content: space-evenly;
-
+  margin-top: 20px;
 }
 
 .nolog {
   font-size: 200%;
   border: 2px solid #ff0015;
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-content: center;
   justify-self: center;
   background-color: #fe6e7a;
+  border-radius: 8px;
 }

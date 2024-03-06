@@ -37,24 +37,23 @@ if (isset($_SESSION['user_id'])) {
   echo '  <div class="show" id="projshow" onclick="window.open(\'../bezier/\');">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo "    <h2>Bezier's curve!</h2>";
-  echo "    <p>A simple program to calculate a bezier's curve with unlimited points.";
-  echo '    </p>';
+  echo "    <h>A simple program to calculate a bezier's curve with unlimited points.";
+  echo '    </h>';
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../parlament/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2>Parlament!</h2>';
-  echo '    <p>Exclusive site for our school parlament to store all records.';
-  echo '    </p>';
+  echo '    <h>Exclusive site for our school parlament to store all records.';
+  echo '    </h>';
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../qr/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2>Qr code!</h2>';
-  echo '    <p>A simple QR code generator for all of your needs.';
-  echo '    </p>';
+  echo '    <h>A simple QR code generator for all of your needs.';
+  echo '    </h>';
   echo '  </div>';
   echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
-  <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 </html>';

@@ -37,24 +37,23 @@ if (isset($_SESSION['user_id'])) {
   echo '  <div class="show" id="projshow" onclick="window.open(\'../tictactoe\');">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2> Tic Tac Toe!</h2>';
-  echo '    <p>Basic Tic Tac Toe game with changeable size of grid.';
-  echo '    </p>';
+  echo '    <h>Basic Tic Tac Toe game with changeable size of grid.';
+  echo '    </h>';
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../purpix/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2>Purpix!</h2>';
-  echo '    <p>If you like semi-coding you can try this one.';
-  echo '    </p>';
+  echo '    <h>If you like semi-coding you can try this one.';
+  echo '    </h>';
   echo '  </div>';
   echo '  <div class="show" id="gameshow" onclick="window.open(\'../popclicker/\')">';
   echo '    <i class="fa-solid fa-up-right-from-square"></i>';
   echo '    <h2> Popclicker!</h2>';
-  echo '    <p>You know cookie clicker? Try this one with our own characters.';
-  echo '    </p>';
+  echo '    <h>You know cookie clicker? Try this one with our own characters.';
+  echo '    </h>';
   echo '  </div>';
   echo '</div>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
-  <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 </html>';
