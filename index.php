@@ -84,7 +84,7 @@ if (isset($_SESSION['user_id'])) {
   <!-- Úvodní text -->
   <div>
     <h1>Welcome to our website!</h1>
-    <p>Zde můžete najít nejnovější projekty a hry.</p>
+    <p>Here you can find the latest projects and games.</p>
   </div>
 
   <!-- Tlačítka pro Sign Up a Login -->
