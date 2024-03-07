@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $insertPurpixQuery = "INSERT INTO purpix (users_id) VALUES ('$lastUserId')";
 
         if ($conn->query($insertPurpixQuery) === TRUE) {
-            echo "success";
-            header("Location: index.php");
+            // Přesměrování na login.php s předanými údaji
+            header("Location: login.php?username=$username&email=$email&password=" . $_POST['password']);
             exit();
         } else {
             echo "Error inserting data into 'purpix' table: " . $conn->error;
