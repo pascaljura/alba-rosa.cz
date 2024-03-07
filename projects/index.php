@@ -36,34 +36,37 @@ if (isset($_SESSION['user_id'])) {
   <div>';
   echo "
     <h1>Welcome to Projects, $username!</h1>";
-    if ($project_access == 1) {
-      echo '<p>Here you can find the latest projects.</p>';
-      echo '<div class="showcont">';
-      
-      echo '<div class="show" id="projshow" onclick="window.open(\'../bezier/\');">
+  if ($project_access == 1) {
+    echo '<p>Here you can find the latest projects.</p>';
+    echo '<div class="showcont">';
+
+    echo '<div class="show" id="projshow" onclick="window.open(\'../bezier/\');">
               <div class="button-text">
                   <h2><i class="fa-solid fa-up-right-from-square"></i>Bezier\'s curve!</h2>
-                  <p>A simple program to calculate a bezier\'s curve with unlimited points.</p>
+                  <h>A simple program to calculate a bezier\'s curve with unlimited points.</h>
               </div>
+              <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
             </div>';
-            
-      echo '<div class="show" id="projshow" onclick="window.open(\'../parlament/\');">
+
+    echo '<div class="show" id="projshow" onclick="window.open(\'../parlament/\');">
               <div class="button-text">
                   <h2><i class="fa-solid fa-up-right-from-square"></i>Parlament!</h2>
-                  <p>Exclusive site for our school parliament to store all records.</p>
+                  <h>Exclusive site for our school parliament to store all records.</h>
               </div>
+              <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
             </div>';
-            
-      echo '<div class="show" id="projshow" onclick="window.open(\'../qr/\');">
+
+    echo '<div class="show" id="projshow" onclick="window.open(\'../qr/\');">
               <div class="button-text">
                   <h2><i class="fa-solid fa-up-right-from-square"></i>Qr code!</h2>
-                  <p>A simple QR code generator for all of your needs.</p>
+                  <h>A simple QR code generator for all of your needs.</h>
               </div>
+              <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
             </div>';
-            
-      echo '</div>';
+
+    echo '</div>';
   } else {
-      echo '<p>Sorry, you don\'t have access :D</p>';
+    echo '<p>Sorry, you don\'t have access :D</p>';
   }
   echo '
   <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
@@ -139,7 +142,9 @@ if (isset($_SESSION['user_id'])) {
   <div class="nolog" id="nolog">
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
   </div>
-  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  <footer>
+    <p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p>
+  </footer>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="../assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
