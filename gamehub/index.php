@@ -35,28 +35,37 @@ if (isset($_SESSION['user_id'])) {
   </div>';
   echo '<div class="showcont">';
   echo '
-<div class="show" id="projshow" onclick="window.open(\'../tictactoe/\');">
+<div class="show" id="projshow">
   <div class="button-text">
-    <h2><i class="fa-solid fa-up-right-from-square"></i>Tic Tac Toe!</h2>
+    <h2>&#9839; Tic Tac Toe!</h2>
     <h>Basic Tic Tac Toe game with changeable size of grid.</h>
     </div>
-    <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
-</div>';
+    <div class="button-container">
+    <button class="project-button" onclick="window.open(\'../tictactoe/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+    <button class="project-button" onclick="window.open(\'https://github.com/matkolo1/tictactoe\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+    </div>
+    </div>';
   echo '
-<div class="show" id="projshow" onclick="window.open(\'../purpix/\');">
+<div class="show" id="projshow" >
   <div class="button-text">
-    <h2><i class="fa-solid fa-up-right-from-square"></i>Purpix!</h2>
+    <h2><i class="fa fa-square"></i>Purpix!</h2>
     <h>If you like semi-coding you can try this one.</h>
   </div>
-  <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
-</div>';
+  <div class="button-container">
+  <button class="project-button" onclick="window.open(\'../purpix/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+  <button class="project-button" onclick="window.open(\'https://github.com/matkolo1/purkiada\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+  </div>
+  </div>';
   echo '
-<div class="show" id="projshow" onclick="window.open(\'../popclicker/\');">
+<div class="show" id="projshow">
   <div class="button-text">
-    <h2><i class="fa-solid fa-up-right-from-square"></i>Popclicker!</h2>
+    <h2><i class="fa fa-hand-pointer-o"></i>Popclicker!</h2>
     <h>You know cookie clicker? Try this one with our own characters.</h>
   </div>
-  <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
+  <div class="button-container">
+  <button class="project-button" onclick="window.open(\'../popclicker/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+  <button class="project-button" onclick="window.open(\'https://github.com/pascaljura/poclicker\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+  </div>
 </div>';
   echo '</div>
   <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
@@ -132,7 +141,9 @@ if (isset($_SESSION['user_id'])) {
   <div class="nolog" id="nolog">
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
   </div>
-  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  <footer>
+    <p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p>
+  </footer>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
   <script src="../assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>

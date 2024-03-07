@@ -54,8 +54,9 @@ li button:hover {
 }
 
 .fa-solid,
-.fa-regular, .fa-brands {
-  padding-right: 2px;
+.fa-regular,
+.fa-brands, .fa {
+  padding-right: 5px;
 }
 
 /* Styling pro <h1> */
@@ -134,6 +135,11 @@ p {
   border-radius: 5px;
 }
 
+.button-container {
+  display: flex;
+  margin-top: 2px;
+}
+
 .swbtn img {
   width: 30px;
   height: auto;
@@ -161,7 +167,6 @@ p {
 .show:hover {
   background-color: #007acc;
   color: white;
-  cursor: pointer;
 }
 
 .project-button {
@@ -171,7 +176,7 @@ p {
   cursor: pointer;
   height: fit-content;
   width: fit-content;
-  margin: 5px;
+  margin: 3px;
   border: none;
   border-radius: 5px;
   transition: background-color 0.2s ease-in;

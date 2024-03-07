@@ -40,29 +40,38 @@ if (isset($_SESSION['user_id'])) {
     echo '<p>Here you can find the latest projects.</p>';
     echo '<div class="showcont">';
 
-    echo '<div class="show" id="projshow" onclick="window.open(\'../bezier/\');">
+    echo '<div class="show" id="projshow">
               <div class="button-text">
-                  <h2><i class="fa-solid fa-up-right-from-square"></i>Bezier\'s curve!</h2>
+                  <h2><i class="fa-solid fa-bezier-curve"></i>Bezier\'s curve!</h2>
                   <h>A simple program to calculate a bezier\'s curve with unlimited points.</h>
               </div>
-              <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
-            </div>';
+              <div class="button-container">
+              <button class="project-button" onclick="window.open(\'../bezier/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+              <button class="project-button" onclick="window.open(\'https://github.com/matkolo1/bezier\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+              </div>
+              </div>';
 
-    echo '<div class="show" id="projshow" onclick="window.open(\'../parlament/\');">
+    echo '<div class="show" id="projshow">
               <div class="button-text">
-                  <h2><i class="fa-solid fa-up-right-from-square"></i>Parlament!</h2>
+                  <h2><i class="fa-solid fa-chalkboard-user"></i>Parlament!</h2>
                   <h>Exclusive site for our school parliament to store all records.</h>
               </div>
-              <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
-            </div>';
+              <div class="button-container">
+              <button class="project-button" onclick="window.open(\'../parlament/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+              <button class="project-button" onclick="window.open(\'https://github.com/pascaljura/parlament\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+              </div>
+              </div>';
 
-    echo '<div class="show" id="projshow" onclick="window.open(\'../qr/\');">
+    echo '<div class="show" id="projshow">
               <div class="button-text">
-                  <h2><i class="fa-solid fa-up-right-from-square"></i>Qr code!</h2>
+                  <h2><i class="fa-solid fa-qrcode"></i>Qr code!</h2>
                   <h>A simple QR code generator for all of your needs.</h>
               </div>
-              <button class="project-button" onclick="window.open(\'../error/\');" ><i class="fa-brands fa-github"></i>GitHub</button>
-            </div>';
+              <div class="button-container">
+              <button class="project-button" onclick="window.open(\'../qr/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+              <button class="project-button" onclick="window.open(\'https://github.com/pascaljura/qr-code\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+              </div>
+              </div>';
 
     echo '</div>';
   } else {
