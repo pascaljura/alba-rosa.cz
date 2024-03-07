@@ -1,7 +1,7 @@
 body {
   font-family: "Arial", sans-serif;
   background-color: #f2f7ff;
-  margin: 10;
+  margin: 10px;
   padding: 0;
 }
 
@@ -16,14 +16,14 @@ body {
 }
 
 li a {
-  float: left;
+  float: inline-start;
 }
 
 li button {
   background: none;
   outline: none;
   border: none;
-  float: right;
+  float: inline-end;
   height: 100%;
 }
 
@@ -55,7 +55,8 @@ li button:hover {
 
 .fa-solid,
 .fa-regular,
-.fa-brands, .fa {
+.fa-brands,
+.fa {
   padding-right: 5px;
 }
 
@@ -201,19 +202,23 @@ p {
 .nolog {
   font-size: 200%;
   border: 2px solid #ff0015;
-  width: 80%;
+  margin: 10px;
+  padding: 10px;
   display: flex;
   justify-content: center;
-  align-content: center;
-  justify-self: center;
   background-color: #fe6e7a;
   border-radius: 8px;
 }
 
 footer {
-  position: absolute;
   bottom: 0;
-  left: 20%;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: center;
+}
+
+footer p {
   width: 50%;
   margin: 30px;
   padding: 10px;
@@ -221,32 +226,46 @@ footer {
   text-align: center;
   background-color: #007acc;
   border-radius: 8px;
-  position: bottom;
 }
 
 @media (max-width: 600px) {
 
-  li a,
-  li button {
-    padding: 10px;
+  .showcont {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  h1,
-  h2,
-  p {
-    margin-left: 5px;
+  .show {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .navbar {
+    margin: 0;
+    padding: 5px;
+  }
+
+  li a,
+  li button {
+    padding: 7px 8px;
+  }
+
+  .nolog {
+    font-size: 100%;
   }
 
   .popup {
     width: 80%;
   }
 
-  .popup input {
-    width: 100%;
+  footer p {
+    padding: 3px;
+    margin: 5px;
   }
 
-  .pasdiv,
-  .button-text {
-    width: 100%;
+  footer {
+    margin-top: 10px;
+    position: sticky;
   }
 }
