@@ -201,13 +201,15 @@ p {
 
 .nolog {
   font-size: 200%;
-  border: 2px solid #ff0015;
   margin: 10px;
   padding: 10px;
   display: flex;
+  text-align: left;
   justify-content: center;
+  align-items: center;
   background-color: #fe6e7a;
   border-radius: 8px;
+  box-shadow: 0 0 20px #0000003b;
 }
 
 footer {
