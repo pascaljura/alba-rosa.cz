@@ -13,7 +13,6 @@ if (isset($_SESSION['user_id'])) {
   } else {
     $project_access = 0;
   }
-  $conn->close();
   echo '
 <html lang="en">
 
@@ -37,43 +36,38 @@ if (isset($_SESSION['user_id'])) {
   echo "
     <h1>Welcome to Projects, $username!</h1>";
   if ($project_access == 1) {
-    echo '<p>Here you can find the latest projects.</p>';
-    echo '<div class="showcont">';
+    // Získání dat z tabulky gamehub
+    $query = "SELECT * FROM projects";
+    $result = $conn->query($query);
 
-    echo '<div class="show" id="projshow">
-              <div class="button-text">
-                  <h2><i class="fa-solid fa-bezier-curve"></i>Bezier\'s curve!</h2>
-                  <h>A simple program to calculate a bezier\'s curve with unlimited points.</h>
-              </div>
-              <div class="button-container">
-              <button class="project-button" onclick="window.open(\'../bezier/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
-              <button class="project-button" onclick="window.open(\'https://github.com/matkolo1/bezier\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
-              </div>
-              </div>';
+    if ($result->num_rows > 0) {
+      echo '
+      <p>Here you can find the latest games.</p>
+            </div><div class="showcont">';
+      while ($row = $result->fetch_assoc()) {
+        $icon = $row['icon']; // Předpokládejme, že sloupec s ikonami se jmenuje 'icon'
+        $name = $row['name']; // Předpokládejme, že sloupec s názvem se jmenuje 'name'
+        $description = $row['description']; // Předpokládejme, že sloupec s popisem se jmenuje 'description'
+        $web = $row['web']; // Předpokládejme, že sloupec s odkazem na web se jmenuje 'web'
+        $github = $row['github']; // Předpokládejme, že sloupec s odkazem na GitHub se jmenuje 'github'
 
-    echo '<div class="show" id="projshow">
-              <div class="button-text">
-                  <h2><i class="fa-solid fa-chalkboard-user"></i>Parlament!</h2>
-                  <h>Exclusive site for our school parliament to store all records.</h>
-              </div>
-              <div class="button-container">
-              <button class="project-button" onclick="window.open(\'../parlament/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
-              <button class="project-button" onclick="window.open(\'https://github.com/pascaljura/parlament\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
-              </div>
-              </div>';
-
-    echo '<div class="show" id="projshow">
-              <div class="button-text">
-                  <h2><i class="fa-solid fa-qrcode"></i>Qr code!</h2>
-                  <h>A simple QR code generator for all of your needs.</h>
-              </div>
-              <div class="button-container">
-              <button class="project-button" onclick="window.open(\'../qr/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
-              <button class="project-button" onclick="window.open(\'https://github.com/pascaljura/qr-code\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
-              </div>
-              </div>';
-
-    echo '</div>';
+        // Vytvoření HTML bloku pro každý záznam v tabulce
+        echo '
+      
+        <div class="show" id="projshow">
+            <div class="button-text">
+                <h2>' . $icon . '' . $name . '</h2>
+                <h>' . $description . '</h>
+            </div>
+            <div class="button-container">
+                <button class="project-button" onclick="window.open(\'' . $web . '\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+                <button class="project-button" onclick="window.open(\'' . $github . '\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+            </div>
+        </div>';
+      }
+    } else {
+      echo "<p>No projects found in the gamehub.</p>";
+    }
   } else {
     echo '<p>Sorry, you don\'t have access :D</p>';
   }

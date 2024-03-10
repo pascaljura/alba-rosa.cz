@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+include('../assets/config.php');
 session_start();
 
 if (isset($_SESSION['user_id'])) {
@@ -31,42 +32,38 @@ if (isset($_SESSION['user_id'])) {
   <div>';
   echo "
     <h1>Welcome to GameHub, $username!</h1>";
-  echo ' <p>Here you can find the latest games.</p>
-  </div>';
-  echo '<div class="showcont">';
-  echo '
-<div class="show" id="projshow">
-  <div class="button-text">
-    <h2>&#9839; Tic Tac Toe!</h2>
-    <h>Basic Tic Tac Toe game with changeable size of grid.</h>
-    </div>
-    <div class="button-container">
-    <button class="project-button" onclick="window.open(\'../tictactoe/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
-    <button class="project-button" onclick="window.open(\'https://github.com/matkolo1/tictactoe\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
-    </div>
-    </div>';
-  echo '
-<div class="show" id="projshow" >
-  <div class="button-text">
-    <h2><i class="far fa-square"></i>Purpix!</h2>
-    <h>If you like semi-coding you can try this one.</h>
-  </div>
-  <div class="button-container">
-  <button class="project-button" onclick="window.open(\'../purpix/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
-  <button class="project-button" onclick="window.open(\'https://github.com/matkolo1/purkiada\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
-  </div>
-  </div>';
-  echo '
-<div class="show" id="projshow">
-  <div class="button-text">
-    <h2><i class="fa fa-hand-pointer-o"></i>Popclicker!</h2>
-    <h>You know cookie clicker? Try this one with our own characters.</h>
-  </div>
-  <div class="button-container">
-  <button class="project-button" onclick="window.open(\'../popclicker/\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
-  <button class="project-button" onclick="window.open(\'https://github.com/pascaljura/poclicker\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
-  </div>
-</div>';
+
+  // Získání dat z tabulky gamehub
+  $query = "SELECT * FROM gamehub";
+  $result = $conn->query($query);
+
+  if ($result->num_rows > 0) {
+    echo '
+    <p>Here you can find the latest games.</p>
+          </div>   <div class="showcont">';
+    while ($row = $result->fetch_assoc()) {
+      $icon = $row['icon']; // Předpokládejme, že sloupec s ikonami se jmenuje 'icon'
+      $name = $row['name']; // Předpokládejme, že sloupec s názvem se jmenuje 'name'
+      $description = $row['description']; // Předpokládejme, že sloupec s popisem se jmenuje 'description'
+      $web = $row['web']; // Předpokládejme, že sloupec s odkazem na web se jmenuje 'web'
+      $github = $row['github']; // Předpokládejme, že sloupec s odkazem na GitHub se jmenuje 'github'
+
+      // Vytvoření HTML bloku pro každý záznam v tabulce
+      echo '
+      <div class="show" id="projshow">
+          <div class="button-text">
+              <h2>' . $icon . '' . $name . '</h2>
+              <h>' . $description . '</h>
+          </div>
+          <div class="button-container">
+              <button class="project-button" onclick="window.open(\'' . $web . '\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+              <button class="project-button" onclick="window.open(\'' . $github . '\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+          </div>
+      </div>';
+    }
+  } else {
+    echo "<p>No projects found in the gamehub.</p>";
+  }
   echo '</div>
   <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
