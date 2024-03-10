@@ -48,7 +48,7 @@ if (isset($_SESSION['user_id'])) {
   echo '
 <div class="show" id="projshow" >
   <div class="button-text">
-    <h2><i class="fa fa-square"></i>Purpix!</h2>
+    <h2><i class="far fa-square"></i>Purpix!</h2>
     <h>If you like semi-coding you can try this one.</h>
   </div>
   <div class="button-container">

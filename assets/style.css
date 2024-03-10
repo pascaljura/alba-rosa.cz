@@ -56,7 +56,7 @@ li button:hover {
 .fa-solid,
 .fa-regular,
 .fa-brands,
-.fa {
+.fa, .far {
   padding-right: 5px;
 }
 
