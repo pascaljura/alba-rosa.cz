@@ -33,32 +33,28 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         }
     }
 } else if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['register'])) {
-        // Zpracování registrace
-        $username = ucfirst($_POST['username']);
-        $email = $_POST['email'];
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-        // Vložení nového uživatele do tabulky "users"
-        $insertUserQuery = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+    // Prověření přihlašovacích údajů
+    $loginQuery = "SELECT * FROM users WHERE email='$email'";
+    $result = $conn->query($loginQuery);
 
-        if ($conn->query($insertUserQuery) === TRUE) {
-            // Úspěšně vytvořeno
-            $lastUserId = $conn->insert_id;
-
-            // Vložení dat do tabulky "purpix"
-            $insertPurpixQuery = "INSERT INTO purpix (users_id) VALUES ('$lastUserId')";
-
-            if ($conn->query($insertPurpixQuery) === TRUE) {
-                echo "success";
-                header("Location: login.php");
-                exit();
-            } else {
-                echo "Error inserting data into 'purpix' table: " . $conn->error;
-            }
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row['password'])) {
+            // Úspěšné přihlášení
+            session_start();
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
+            echo "success";
+            header("Location: index.php");
+            exit();
         } else {
-            echo "Error";
+            echo "Invalid password";
         }
+    } else {
+        echo "User not found";
     }
 }
 
