@@ -14,7 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $lastUserId = $conn->insert_id;
             $insertPurpixQuery = "INSERT INTO purpix (users_id) VALUES ('$lastUserId')";
             if ($conn->query($insertPurpixQuery) === TRUE) {
-                header("Location: login.php?username=$username&email=$email&password=" . $_POST['password']);
+                session_start();
+                $_SESSION['user_id'] = $lastUserId;
+                $_SESSION['username'] = $username;
+                header("Location: index.php");
                 exit();
             } else {
                 echo "Error inserting data into 'purpix' table: " . $conn->error;

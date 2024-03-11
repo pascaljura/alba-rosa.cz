@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+
 <?php
-include('../assets/config.php');
 session_start();
+include('../assets/config.php');
 if (isset($_SESSION['user_id'])) {
   $username = $_SESSION['username'];
   echo "";
   echo '
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -69,6 +70,7 @@ if (isset($_SESSION['user_id'])) {
   exit();
 }
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

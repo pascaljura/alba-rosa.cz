@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 session_start();
 include('../assets/config.php');
@@ -14,6 +13,7 @@ if (isset($_SESSION['user_id'])) {
     $school_access = 0;
   }
   echo '
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -79,7 +79,9 @@ if (isset($_SESSION['user_id'])) {
   exit();
 }
 ?>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,12 +90,15 @@ if (isset($_SESSION['user_id'])) {
   <title>Alba-rosa.cz</title>
   <meta name="author" content="Jiří Boucník & Matěj Kořalka">
   <meta name="application-name" content="Alba-rosa.cz">
-  <meta name="description" content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+  <meta name="description"
+    content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
   <meta property="og:title" content="Alba-rosa.cz">
-  <meta property="og:description" content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+  <meta property="og:description"
+    content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
   <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
 </head>
+
 <body>
   <ul class="navbar">
     <li><a href="../"><i class="fas fa-home"></i> Home</a></li>

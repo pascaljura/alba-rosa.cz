@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <?php
 session_start();
 include('../assets/config.php');
@@ -14,6 +14,7 @@ if (isset($_SESSION['user_id'])) {
     $other_access = 0;
   }
   echo '
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -79,6 +80,7 @@ if (isset($_SESSION['user_id'])) {
   exit();
 }
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
