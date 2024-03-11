@@ -1,12 +1,12 @@
-<!DOCTYPE html>
 <?php
 session_start();
 if (isset($_SESSION['user_id'])) {
   // Uživatel je přihlášen, zobrazíte požadovaný obsah
   $username = $_SESSION['username'];
   echo "";
-  echo '
+  echo '<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +65,9 @@ if (isset($_SESSION['user_id'])) {
   exit();
 }
 ?>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,6 +84,7 @@ if (isset($_SESSION['user_id'])) {
   <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
 </head>
+
 <body>
   <ul class="navbar">
     <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
@@ -122,4 +125,5 @@ if (isset($_SESSION['user_id'])) {
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
