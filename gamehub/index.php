@@ -16,6 +16,13 @@ if (isset($_SESSION['user_id'])) {
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="shortcut icon" href="../assets/icon.ico" type="image/x-icon">
   <title>Alba-rosa.cz</title>
+  <meta name="author" content=\'Jiří Boucník & Matěj Kořalka\'>
+<meta name="application-name" content="Alba-rosa.cz">
+<meta name="description" content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+<meta property="og:title" content="Alba-rosa.cz">
+<meta property="og:description" content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+<meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
+<meta property="og:image:type" content="image/ico">
 </head>
 
 <body>
@@ -83,6 +90,15 @@ if (isset($_SESSION['user_id'])) {
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="shortcut icon" href="../assets/icon.ico" type="image/x-icon">
   <title>Alba-rosa.cz</title>
+  <meta name="author" content="Jiří Boucník & Matěj Kořalka">
+  <meta name="application-name" content="Alba-rosa.cz">
+  <meta name="description"
+    content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+  <meta property="og:title" content="Alba-rosa.cz">
+  <meta property="og:description"
+    content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+  <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
+  <meta property="og:image:type" content="image/ico">
 </head>
 
 <body>
