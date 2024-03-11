@@ -5,13 +5,13 @@ include('../assets/config.php');
 if (isset($_SESSION['user_id'])) {
   $user_id = $_SESSION['user_id'];
   $username = $_SESSION['username'];
-  $query = "SELECT project_access FROM users WHERE id = $user_id";
+  $query = "SELECT school_access FROM users WHERE id = $user_id";
   $result = $conn->query($query);
   if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $project_access = $row['project_access'];
+    $school_access = $row['school_access'];
   } else {
-    $project_access = 0;
+    $school_access = 0;
   }
   echo '
 <html lang="en">
@@ -32,24 +32,26 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-  <ul class="navbar">
-    <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="../projects/" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
-    <li><button onclick="location.href=\'../logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
-  </ul>
+<!-- Menu -->
+<ul class="navbar">
+  <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="../school-projects/" class="active"><i class="fa-solid fa-school"></i> School projects</a></li>
+  <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+  <li><a href="../other/"><i class="fas fa-project-diagram"></i> Other</a></li>
+  <li><button onclick="location.href=\'logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
+</ul>
   <!-- Úvodní text -->
   <div>';
   echo "
-    <h1>Welcome to Projects, $username!</h1>";
-  if ($project_access == 1) {
+    <h1>Welcome to School projects, $username!</h1>";
+  if ($school_access == 1) {
     // Získání dat z tabulky gamehub
-    $query = "SELECT * FROM projects";
+    $query = "SELECT * FROM school";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
       echo '
-      <p>Here you can find the latest games.</p>
+      <p>Here you can find the latest school projects.</p>
             </div><div class="showcont">';
       while ($row = $result->fetch_assoc()) {
         $icon = $row['icon']; // Předpokládejme, že sloupec s ikonami se jmenuje 'icon'
@@ -73,7 +75,7 @@ if (isset($_SESSION['user_id'])) {
         </div>';
       }
     } else {
-      echo "<p>No projects found in the gamehub.</p>";
+      echo "<p>No School projects found in the School projects.</p>";
     }
   } else {
     echo '<p>Sorry, you don\'t have access :D</p>';
@@ -111,22 +113,9 @@ if (isset($_SESSION['user_id'])) {
   <!-- Menu -->
   <ul class="navbar">
     <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="../projects/" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
-
-  <!-- Úvodní text -->
-  <div>
-    <h1>Welcome to Projects!</h1>
-    <p>Here you can find the latest projects.</p>
-  </div>
-
-  <!-- Tlačítka pro Sign Up a Login -->
-  <div>
-
-  </div>
 
   <!-- Pop-up pro Sign Up -->
   <div class="popup" id="popupSignup">

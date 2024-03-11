@@ -29,11 +29,12 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Menu -->
   <ul class="navbar">
-    <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="../projects/" ><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../gamehub/" class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
-    <li><button onclick="location.href=\'../logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
-  </ul>
+  <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="../school-projects/"><i class="fa-solid fa-school"></i> School projects</a></li>
+  <li><a href="../gamehub/"  class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
+  <li><a href="../other/"><i class="fas fa-project-diagram"></i> Other</a></li>
+  <li><button onclick="location.href=\'logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
+</ul>
 
   <!-- Úvodní text -->
   <div>';
@@ -106,22 +107,10 @@ if (isset($_SESSION['user_id'])) {
   <!-- Menu -->
   <ul class="navbar">
     <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="../projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
-    <li><a href="../gamehub/" class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
     <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
 
-  <!-- Úvodní text -->
-  <div>
-    <h1>Welcome to GameHub!</h1>
-    <p>Here you can find the latest games.</p>
-  </div>
-
-  <!-- Tlačítka pro Sign Up a Login -->
-  <div>
-
-  </div>
 
   <!-- Pop-up pro Sign Up -->
   <div class="popup" id="popupSignup">

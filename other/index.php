@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
+include('../assets/config.php');
 if (isset($_SESSION['user_id'])) {
-  // Uživatel je přihlášen, zobrazíte požadovaný obsah
+  $user_id = $_SESSION['user_id'];
   $username = $_SESSION['username'];
-  echo "";
+  $query = "SELECT other_access FROM users WHERE id = $user_id";
+  $result = $conn->query($query);
+  if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $other_access = $row['other_access'];
+  } else {
+    $other_access = 0;
+  }
   echo '
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/style.css">
-  <link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="shortcut icon" href="../assets/icon.ico" type="image/x-icon">
   <title>Alba-rosa.cz</title>
   <meta name="author" content=\'Jiří Boucník & Matěj Kořalka\'>
   <meta name="application-name" content="Alba-rosa.cz">
@@ -25,49 +32,57 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-
-  <!-- Menu -->
-  <ul class="navbar">
-    <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="./school-projects/"><i class="fa-solid fa-school"></i> School projects</a></li>
-    <li><a href="./gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
-    <li><a href="./other/"><i class="fas fa-project-diagram"></i> Other</a></li>
-    <li><button onclick="location.href=\'logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
-  </ul>
-
+<ul class="navbar">
+  <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="../school-projects/"><i class="fa-solid fa-school"></i> School projects</a></li>
+  <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
+  <li><a href="../other/" class="active"><i class="fas fa-project-diagram"></i> Other</a></li>
+  <li><button onclick="location.href=\'logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
+</ul>
   <!-- Úvodní text -->
   <div>';
   echo "
-    <h1>Welcome to our website, $username!</h1>";
-  echo ' <p>Here you can find the latest school projects, games and other.</p>
-  </div>';
-  echo '<div class="showcont">';
+    <h1>Welcome to Other, $username!</h1>";
+  if ($other_access == 1) {
+    // Získání dat z tabulky gamehub
+    $query = "SELECT * FROM other";
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+      echo '
+      <p>Here you can find the latest other things.</p>
+            </div><div class="showcont">';
+      while ($row = $result->fetch_assoc()) {
+        $icon = $row['icon']; // Předpokládejme, že sloupec s ikonami se jmenuje 'icon'
+        $name = $row['name']; // Předpokládejme, že sloupec s názvem se jmenuje 'name'
+        $description = $row['description']; // Předpokládejme, že sloupec s popisem se jmenuje 'description'
+        $web = $row['web']; // Předpokládejme, že sloupec s odkazem na web se jmenuje 'web'
+        $github = $row['github']; // Předpokládejme, že sloupec s odkazem na GitHub se jmenuje 'github'
+
+        // Vytvoření HTML bloku pro každý záznam v tabulce
+        echo '
+      
+        <div class="show" id="projshow">
+            <div class="button-text">
+                <h2>' . $icon . '' . $name . '</h2>
+                <h>' . $description . '</h>
+            </div>
+            <div class="button-container">
+                <button class="project-button" onclick="window.open(\'' . $web . '\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
+                <button class="project-button" onclick="window.open(\'' . $github . '\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
+            </div>
+        </div>';
+      }
+    } else {
+      echo "<p>No projects found in the gamehub.</p>";
+    }
+  } else {
+    echo '<p>Sorry, you don\'t have access :D</p>';
+  }
   echo '
-  <div class="show" id="projshow" onclick="window.open(\'./school/\');">
-    <div class="button-text">
-      <h2><i class="fa-regular fa-folder"></i>Our school projects!</h2>
-      <h></h>
-    </div>
-  </div>';
-  echo '
-  <div class="show" id="projshow" onclick="window.open(\'./gamehub/\');">
-    <div class="button-text">
-      <h2><i class="fa-regular fa-folder"></i>Our GameHub!</h2>
-      <h>Immerse yourself in our captivating game collection.</h>
-    </div>
-  </div>';
-  echo '
-  <div class="show" id="projshow" onclick="window.open(\'./other/\');">
-    <div class="button-text">
-      <h2><i class="fa-regular fa-folder"></i>Other!</h2>
-      <h>Unleash your creativity with our other things.</h>
-    </div>
-  </div>';
-  echo '</div>
-  <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
-  <script src="./assets/script.js"></script>
-  <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
   <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
+  <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 </html>';
   exit();
@@ -80,10 +95,9 @@ if (isset($_SESSION['user_id'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/style.css">
-  <link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="shortcut icon" href="../assets/icon.ico" type="image/x-icon">
   <title>Alba-rosa.cz</title>
-
   <meta name="author" content="Jiří Boucník & Matěj Kořalka">
   <meta name="application-name" content="Alba-rosa.cz">
   <meta name="description"
@@ -99,7 +113,7 @@ if (isset($_SESSION['user_id'])) {
 
   <!-- Menu -->
   <ul class="navbar">
-    <li><a href="./" class="active"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
     <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
@@ -107,13 +121,13 @@ if (isset($_SESSION['user_id'])) {
   <!-- Pop-up pro Sign Up -->
   <div class="popup" id="popupSignup">
     <button class="popClose" onclick="signup(true)">X</button>
-    <form id="signupForm" method="post" action="sign-up.php">
+    <form id="signupForm" method="post" action="../sign-up.php">
       <h2>Sign Up</h2>
       <input type="text" name="username" placeholder="Username" required>
       <input type="email" name="email" placeholder="Email" required>
       <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas'
           required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img
-            src='./assets/eye.png'></button></div>
+            src='../assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Sign Up">
     </form>
     <button onclick="login()" class='svitch'>Login</button>
@@ -122,17 +136,16 @@ if (isset($_SESSION['user_id'])) {
   <!-- Pop-up pro Login -->
   <div class="popup" id="popupLogin">
     <button class="popClose" onclick="login(true)">X</button>
-    <form id="loginForm" method="post" action="login.php">
+    <form id="loginForm" method="post" action="../login.php">
       <h2>Login</h2>
       <input type="email" name="email" placeholder="Email" required>
       <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas'
           required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img
-            src='./assets/eye.png'></button></div>
+            src='../assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Login">
     </form>
     <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
-
   <div class="nolog" id="nolog">
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
   </div>
@@ -140,7 +153,7 @@ if (isset($_SESSION['user_id'])) {
     <p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p>
   </footer>
   <!-- Přidat skripty nebo odkazy na skripty pro funkcionalitu -->
-  <script src="./assets/script.js"></script>
+  <script src="../assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 
