@@ -1,4 +1,8 @@
-# Alba-rosa.cz Website
+<p>
+  <img src="https://alba-rosa.cz/assets/icon.ico" alt="Alba-rosa.cz Logo" width="100" height="100">
+</p>
+
+## Alba-rosa.cz Website
 
 ## Overview
 This README file provides information about the Alba-rosa.cz website code. The website serves as a platform for a community primarily comprised of high school students passionate about programming. Users can explore and share their school projects, games, and other creative works.
