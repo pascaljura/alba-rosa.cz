@@ -36,7 +36,7 @@ if (isset($_SESSION['user_id'])) {
   </div>';
   echo '<div class="showcont">';
   echo '
-  <div class="show" id="projshow" onclick="window.open(\'./school/\');" style="cursor: pointer">
+  <div class="show" id="projshow" onclick="window.open(\'./school-projects/\');" style="cursor: pointer">
     <div class="button-text" >
       <h2><i class="fa-regular fa-folder"></i>Our school projects!</h2>
       <h></h>
