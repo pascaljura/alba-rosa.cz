@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('assets/config.php');
 session_start();
 if (isset($_SESSION['user_id'])) {
@@ -46,4 +47,5 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     }
 }
 $conn->close();
+ob_end_flush();
 ?>
