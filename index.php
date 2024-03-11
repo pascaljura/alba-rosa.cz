@@ -36,21 +36,21 @@ if (isset($_SESSION['user_id'])) {
   </div>';
   echo '<div class="showcont">';
   echo '
-  <div class="show" id="projshow" onclick="window.open(\'./school/\');">
-    <div class="button-text">
+  <div class="show" id="projshow" onclick="window.open(\'./school/\');" style="cursor: pointer">
+    <div class="button-text" >
       <h2><i class="fa-regular fa-folder"></i>Our school projects!</h2>
       <h></h>
     </div>
   </div>';
   echo '
-  <div class="show" id="projshow" onclick="window.open(\'./gamehub/\');">
+  <div class="show" id="projshow" onclick="window.open(\'./gamehub/\');" style="cursor: pointer">
     <div class="button-text">
       <h2><i class="fa-regular fa-folder"></i>Our GameHub!</h2>
       <h>Immerse yourself in our captivating game collection.</h>
     </div>
   </div>';
   echo '
-  <div class="show" id="projshow" onclick="window.open(\'./other/\');">
+  <div class="show" id="projshow" onclick="window.open(\'./other/\');" style="cursor: pointer">
     <div class="button-text">
       <h2><i class="fa-regular fa-folder"></i>Other!</h2>
       <h>Unleash your creativity with our other things.</h>
