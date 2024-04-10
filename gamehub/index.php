@@ -1,9 +1,22 @@
-
 <?php
 session_start();
-include('../assets/config.php');
+include ('../assets/config.php');
 if (isset($_SESSION['user_id'])) {
-  $username = $_SESSION['username'];
+  $user_id = $_SESSION['user_id'];
+  $query = "SELECT username FROM users WHERE id = $user_id";
+  $result = mysqli_query($conn, $query);
+  if ($result) {
+    // Získáme řádek s výsledkem dotazu
+    $row = mysqli_fetch_assoc($result);
+
+    // Získáme jméno uživatele z výsledku dotazu
+    $username = $row['username'];
+
+    // Uvolníme výsledek dotazu
+    mysqli_free_result($result);
+  } else {
+    echo 'Chyba při provádění dotazu: ' . mysqli_error($conn);
+  }
   echo "";
   echo '
   <!DOCTYPE html>
@@ -45,7 +58,7 @@ if (isset($_SESSION['user_id'])) {
       $icon = $row['icon'];
       $name = $row['name'];
       $description = $row['description'];
-      $web = $row['web']; 
+      $web = $row['web'];
       $github = $row['github'];
       echo '
       <div class="show" id="projshow">
@@ -72,6 +85,7 @@ if (isset($_SESSION['user_id'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,6 +102,7 @@ if (isset($_SESSION['user_id'])) {
   <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
 </head>
+
 <body>
   <ul class="navbar">
     <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
@@ -128,4 +143,5 @@ if (isset($_SESSION['user_id'])) {
   <script src="../assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

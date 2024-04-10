@@ -1,17 +1,44 @@
 <?php
 session_start();
-include('../assets/config.php');
+include ('../assets/config.php');
 if (isset($_SESSION['user_id'])) {
+  // Získání user_id z session
   $user_id = $_SESSION['user_id'];
-  $username = $_SESSION['username'];
-  $query = "SELECT school_access FROM users WHERE id = $user_id";
-  $result = $conn->query($query);
-  if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $school_access = $row['school_access'];
+
+  // Dotaz na databázi pro získání jména uživatele na základě user_id
+  $query_username = "SELECT username FROM users WHERE id = ?";
+  $stmt_username = $conn->prepare($query_username);
+  $stmt_username->bind_param("i", $user_id);
+  $stmt_username->execute();
+  $result_username = $stmt_username->get_result();
+
+  if ($result_username) {
+    $row_username = $result_username->fetch_assoc();
+    $username = $row_username['username'];
+    mysqli_free_result($result_username);
   } else {
-    $school_access = 0;
+    echo 'Chyba při provádění dotazu na jméno uživatele: ' . $conn->error;
   }
+
+  // Dotaz na databázi pro získání školského přístupu na základě user_id
+  $query_school_access = "SELECT school_access FROM users WHERE id = ?";
+  $stmt_school_access = $conn->prepare($query_school_access);
+  $stmt_school_access->bind_param("i", $user_id);
+  $stmt_school_access->execute();
+  $result_school_access = $stmt_school_access->get_result();
+
+  if ($result_school_access) {
+    if ($result_school_access->num_rows > 0) {
+      $row_school_access = $result_school_access->fetch_assoc();
+      $school_access = $row_school_access['school_access'];
+    } else {
+      $school_access = 0;
+    }
+    mysqli_free_result($result_school_access);
+  } else {
+    echo 'Chyba při provádění dotazu na školský přístup: ' . $conn->error;
+  }
+
   echo '
   <!DOCTYPE html>
 <html lang="en">

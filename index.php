@@ -1,8 +1,23 @@
 <?php
 session_start();
+include ('./assets/config.php');
 if (isset($_SESSION['user_id'])) {
-  // Uživatel je přihlášen, zobrazíte požadovaný obsah
-  $username = $_SESSION['username'];
+  $user_id = $_SESSION['user_id'];
+  $query = "SELECT username FROM users WHERE id = $user_id";
+  $result = mysqli_query($conn, $query);
+  if ($result) {
+    // Získáme řádek s výsledkem dotazu
+    $row = mysqli_fetch_assoc($result);
+
+    // Získáme jméno uživatele z výsledku dotazu
+    $username = $row['username'];
+
+    // Uvolníme výsledek dotazu
+    mysqli_free_result($result);
+  } else {
+    echo 'Chyba při provádění dotazu: ' . mysqli_error($conn);
+  }
+
   echo "";
   echo '<!DOCTYPE html>
 <html lang="en">
