@@ -1,11 +1,11 @@
-
 <?php
 session_start();
 include('../assets/config.php');
-if (isset($_SESSION['user_id'])) {
-  $user_id = $_SESSION['user_id'];
+
+if (isset($_SESSION['idusers'])) {
+  $idusers = $_SESSION['idusers'];
   $username = $_SESSION['username'];
-  $query = "SELECT other_access FROM users WHERE id = $user_id";
+  $query = "SELECT other_access FROM users_alba_rosa WHERE idusers = $idusers";
   $result = $conn->query($query);
   if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
@@ -42,7 +42,7 @@ if (isset($_SESSION['user_id'])) {
   echo "
     <h1>Welcome to Other, $username!</h1>";
   if ($other_access == 1) {
-    $query = "SELECT * FROM other";
+    $query = "SELECT * FROM other_alba_rosa";
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
       echo '
@@ -79,64 +79,9 @@ if (isset($_SESSION['user_id'])) {
 </html>';
   exit();
 }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/style.css">
-  <link rel="shortcut icon" href="../assets/icon.ico" type="image/x-icon">
-  <title>Alba-rosa.cz</title>
-  <meta name="author" content="Jiří Boucník & Matěj Kořalka">
-  <meta name="application-name" content="Alba-rosa.cz">
-  <meta name="description"
-    content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
-  <meta property="og:title" content="Alba-rosa.cz">
-  <meta property="og:description"
-    content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
-  <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
-  <meta property="og:image:type" content="image/ico">
-</head>
-<body>
-  <ul class="navbar">
-    <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
-    <li><button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button></li>
-    <li><button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button></li>
-  </ul>
-  <div class="popup" id="popupSignup">
-    <button class="popClose" onclick="signup(true)">X</button>
-    <form id="signupForm" method="post" action="../sign-up.php">
-      <h2>Sign Up</h2>
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <div id='pasdiv' class='pasdiv'><input type="password" name="password" placeholder="Password" id='signpas'
-          required><button onclick='passhow(document.getElementById("signpas"))' class='swbtn'><img
-            src='../assets/eye.png'></button></div>
-      <input type="submit" class="submitbtn" value="Sign Up">
-    </form>
-    <button onclick="login()" class='svitch'>Login</button>
-  </div>
-  <div class="popup" id="popupLogin">
-    <button class="popClose" onclick="login(true)">X</button>
-    <form id="loginForm" method="post" action="../login.php">
-      <h2>Login</h2>
-      <input type="email" name="email" placeholder="Email" required>
-      <div id='pasdiv' class='pasdiv'><input type="password" name='password' placeholder="Password" id='logpas'
-          required><button onclick='passhow(document.getElementById("logpas"))' class='swbtn'><img
-            src='../assets/eye.png'></button></div>
-      <input type="submit" class="submitbtn" value="Login">
-    </form>
-    <button onclick="signup()" class='svitch'>Sign Up</button>
-  </div>
-  <div class="nolog" id="nolog">
-    <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
-  </div>
-  <footer>
-    <p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p>
-  </footer>
-  <script src="../assets/script.js"></script>
-  <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
-</body>
 
-</html>
+else {
+  header("Location: ../index.php");
+  exit();
+};
+?>

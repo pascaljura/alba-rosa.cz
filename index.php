@@ -1,9 +1,9 @@
 <?php
 session_start();
 include ('./assets/config.php');
-if (isset($_SESSION['user_id'])) {
-  $user_id = $_SESSION['user_id'];
-  $query = "SELECT username FROM users WHERE id = $user_id";
+if (isset($_SESSION['idusers'])) {
+  $idusers = $_SESSION['idusers'];
+  $query = "SELECT username FROM users_alba_rosa WHERE idusers = $idusers";
   $result = mysqli_query($conn, $query);
   if ($result) {
     // Získáme řádek s výsledkem dotazu
@@ -119,7 +119,6 @@ if (isset($_SESSION['user_id'])) {
             src='./assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Sign Up">
     </form>
-    <button onclick="login()" class='svitch'>Login</button>
   </div>
   <div class="popup" id="popupLogin">
     <button class="popClose" onclick="login(true)">X</button>
@@ -131,7 +130,6 @@ if (isset($_SESSION['user_id'])) {
             src='./assets/eye.png'></button></div>
       <input type="submit" class="submitbtn" value="Login">
     </form>
-    <button onclick="signup()" class='svitch'>Sign Up</button>
   </div>
   <div class="nolog" id="nolog">
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
