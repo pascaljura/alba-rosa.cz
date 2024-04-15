@@ -12,7 +12,13 @@ function login(close) {
   else popup.style = 'display: flex';
 }
 
-function passhow(doc) {
-  if (doc.type == 'password') doc.type = 'text';
-  else doc.type = 'password';
+function passhow(event, doc) {
+  event.preventDefault();
+  if (doc.type == 'password') {
+      doc.type = 'text';
+  } else {
+      doc.type = 'password';
+  }
 }
+
+
