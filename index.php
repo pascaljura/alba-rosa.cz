@@ -72,10 +72,9 @@ if (isset($_SESSION['idusers'])) {
     </div>
   </div>';
   echo '</div>
-  <iframe src="https://discord.com/widget?id=1204433589580603493&theme=dark" width="250" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
-  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
 </body>
 </html>';
   exit();
@@ -134,11 +133,9 @@ if (isset($_SESSION['idusers'])) {
   <div class="nolog" id="nolog">
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
   </div>
-  <iframe src="https://discord.com/widget?id=1204433589580603493&theme=dark" width="350" height="500"
-    allowtransparency="true" frameborder="0"
-    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
   <footer>
-    <p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p>
+    <p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj
+      Kořalka | &#169; 2024</p>
   </footer>
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>

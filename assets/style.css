@@ -13,6 +13,8 @@ body {
   overflow: hidden;
   background-color: #007acc;
   border-radius: 8px;
+  position: sticky;
+  top: 10px;
 }
 
 li a {

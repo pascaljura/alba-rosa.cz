@@ -99,7 +99,7 @@ if (isset($_SESSION['idusers'])) {
     echo '<p>Sorry, you don\'t have access :D</p>';
   }
   echo '
-  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 </html>';
