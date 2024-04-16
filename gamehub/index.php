@@ -48,7 +48,7 @@ if (isset($_SESSION['idusers'])) {
   <div>';
   echo "
     <h1>Welcome to GameHub, $username!</h1>";
-  $query = "SELECT * FROM gamehub_alba_rosa";
+  $query = "SELECT * FROM gamehub_public_alba_rosa";
   $result = $conn->query($query);
   if ($result->num_rows > 0) {
     echo '
