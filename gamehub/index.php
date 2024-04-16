@@ -75,16 +75,50 @@ if (isset($_SESSION['idusers'])) {
   } else {
     echo "<p>No games found in the gamehub.</p>";
   }
-  echo '</div>
-  <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  echo '</div>  <div style="margin-top: 30px">';
+  $idusers = $_SESSION['idusers'];
+
+  // Příprava dotazu
+  $query = "SELECT gamehub_private_access FROM users_alba_rosa WHERE idusers = $idusers";
+  $result = $conn->query($query);
+  if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    if ($row['gamehub_private_access'] == 1) {
+      $query = "SELECT * FROM gamehub_private_alba_rosa";
+      $result = $conn->query($query);
+      if ($result->num_rows > 0) {
+        echo '<p>Here you will find free paid games.</p></div><div class="showcont">';
+        while ($row = $result->fetch_assoc()) {
+          $icon = $row['icon'];
+          $name = $row['name'];
+          $description = $row['description'];
+          $web = $row['web'];
+          $github = $row['github'];
+          echo '<div class="show" id="projshow">
+                          <div class="button-text">
+                              <h2>' . $icon . '' . $name . '</h2>
+                              <h>' . $description . '</h>
+                          </div>
+                          <div class="button-container">'. 
+                              $web .
+                              $github . '
+                          </div>
+                        </div>';
+        }
+      } else {
+      }
+    }
+  } else {
+  }
+
+  echo '</div> <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 </html>';
   exit();
-}
-
-else {
+} else {
   header("Location: ../index.php");
   exit();
-};
+}
+;
 ?>
