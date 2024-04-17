@@ -74,7 +74,7 @@ if (isset($_SESSION['idusers'])) {
   echo '</div>
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
-  <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" target="_blank" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
 </body>
 </html>';
   exit();
@@ -134,7 +134,8 @@ if (isset($_SESSION['idusers'])) {
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
   </div>
   <footer>
-    <p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj
+    <p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;" target="_blank"><i
+          class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj
       Kořalka | &#169; 2024</p>
   </footer>
   <script src="./assets/script.js"></script>
