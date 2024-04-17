@@ -109,6 +109,7 @@ if (isset($_SESSION['idusers'])) {
       }
     }
   } else {
+echo "Would you like to have access to our private content? Connect to our <a href='' style='color: #000000'>DISCORD</a> server!";
   }
 
   echo '</div> <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
