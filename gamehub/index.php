@@ -99,8 +99,8 @@ if (isset($_SESSION['idusers'])) {
                               <h2>' . $icon . '' . $name . '</h2>
                               <h>' . $description . '</h>
                           </div>
-                          <div class="button-container">' .
-            $buttons . '
+                          <div class="button-container">'. 
+                              $buttons .'
                           </div>
                         </div>';
         }
@@ -111,7 +111,6 @@ if (isset($_SESSION['idusers'])) {
       echo "<p>Would you like to have access to our private content? Connect to our <a href='https://discord.com/invite/ZeHnED2BCG' style='color: #000000' target='_blank'>DISCORD</a> server!</p>";
     }
   } else {
-
   }
 
   echo '</div> <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;" target="_blank"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
