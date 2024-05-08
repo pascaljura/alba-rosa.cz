@@ -212,5 +212,4 @@ if (isset($_SESSION['idusers'])) {
 </html>';
   exit();
 }
-;
 ?>

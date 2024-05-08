@@ -130,5 +130,4 @@ if (isset($_SESSION['idusers'])) {
   header("Location: ../index.php");
   exit();
 }
-;
 ?>
