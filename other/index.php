@@ -157,7 +157,10 @@ if (isset($_SESSION['idusers'])) {
   } else {
     echo "<p>No other things found in the other things.</p>";
   }
-  echo '
+  echo '  </div><br>
+  <div class="nolog" id="nolog">
+  <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
+</div>
   <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" target="_blank" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
