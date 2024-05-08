@@ -131,7 +131,7 @@ if (isset($_SESSION['idusers'])) {
   <li><button onclick="signup()" style="cursor: pointer;"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
-  <div>
+
   <div class="popup" id="popupSignup">
   <button class="popClose" onclick="signup(true)">X</button>
   <form id="signupForm" method="post" action="sign-up.php">
@@ -154,7 +154,7 @@ if (isset($_SESSION['idusers'])) {
           src="../assets/eye.png"></button></div>
     <input type="submit" class="submitbtn" value="Login">
   </form>
-</div>';
+</div>  <div>';
   echo "
     <h1>Welcome to School projects!</h1>";
   $query = "SELECT * FROM school_alba_rosa";
