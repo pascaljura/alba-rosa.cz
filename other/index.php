@@ -24,9 +24,9 @@ if (isset($_SESSION['idusers'])) {
   <title>Alba-rosa.cz</title>
   <meta name="author" content=\'Jiří Boucník & Matěj Kořalka\'>
   <meta name="application-name" content="Alba-rosa.cz">
-  <meta name="description" content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+  <meta name="description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
   <meta property="og:title" content="Alba-rosa.cz">
-  <meta property="og:description" content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+  <meta property="og:description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
   <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
 </head>
@@ -91,9 +91,9 @@ if (isset($_SESSION['idusers'])) {
   <title>Alba-rosa.cz</title>
   <meta name="author" content=\'Jiří Boucník & Matěj Kořalka\'>
   <meta name="application-name" content="Alba-rosa.cz">
-  <meta name="description" content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+  <meta name="description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
   <meta property="og:title" content="Alba-rosa.cz">
-  <meta property="og:description" content="Naše komunita je složená hlavně ze studentů středních škol věnujících se programování. Podílíme se na projektech, které tu (i jinde) sdílíme, a i ty, zde můžeš sdílet své projekty.">
+  <meta property="og:description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
   <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
 </head>
