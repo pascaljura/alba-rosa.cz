@@ -36,7 +36,7 @@ if (isset($_SESSION['idusers'])) {
   <li><a href="../school-projects/"><i class="fa-solid fa-school"></i> School projects</a></li>
   <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
   <li><a href="../other/" class="active"><i class="fas fa-project-diagram"></i> Other</a></li>
-  <li><button onclick="location.href=\'../logout.php\'"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
+  <li><button onclick="location.href=\'../logout.php\'" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
 </ul>
   <div>';
   echo "
