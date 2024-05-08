@@ -157,7 +157,7 @@ if (isset($_SESSION['idusers'])) {
   </div>
   <br>
   <div class="nolog" id="nolog">
-    <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
+    <h2> Ready to dive in? Log in now to unlock all of our game content! </h2>
   </div>
 
   <footer>
