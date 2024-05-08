@@ -47,7 +47,10 @@ if (isset($_SESSION['idusers'])) {
   <div>';
   echo "
     <h1>Welcome to our website, $username!</h1>";
-  echo ' <p>Here you can find the latest school projects, games and other.</p>
+  echo ' <p>  <p>We\'re glad you\'re here!<br>
+  Our community is mainly made up of high school students interested in programming. <br>We participate in the
+  projects we
+  share here (and elsewhere), and you, too, can share your projects here.</p></p>
   </div>';
   echo '<div class="showcont">';
   echo '
@@ -132,9 +135,31 @@ if (isset($_SESSION['idusers'])) {
       <input type="submit" class="submitbtn" value="Login">
     </form>
   </div>
+  <h1>Welcome to our website!</h1>
+  <p>We're glad you're here!<br>
+    Our community is mainly made up of high school students interested in programming. <br>We participate in the
+    projects we
+    share here (and elsewhere), and you, too, can share your projects here.</p>
+  </div>
+  <div class="showcont">
+    <div class="show" id="projshow" onclick="location.href = './school-projects/'" style="cursor: pointer">
+      <div class="button-text">
+        <h2><i class="fa-regular fa-folder"></i>Our school projects!</h2>
+        <h></h>
+      </div>
+    </div>
+    <div class="show" id="projshow" onclick="location.href = './other/'" style="cursor: pointer">
+      <div class="button-text">
+        <h2><i class="fa-regular fa-folder"></i>Other!</h2>
+        <h>Unleash your creativity with our other things.</h>
+      </div>
+    </div>
+  </div>
+  <br>
   <div class="nolog" id="nolog">
     <h2> Ready to dive in? Log in now to unlock all of our content! </h2>
   </div>
+
   <footer>
     <p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;" target="_blank"><i
           class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj

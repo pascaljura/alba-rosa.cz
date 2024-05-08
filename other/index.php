@@ -73,7 +73,7 @@ if (isset($_SESSION['idusers'])) {
     echo '<p>Sorry, you don\'t have access :D</p>';
   }
   echo '
-  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" target="_blank" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 </html>';
@@ -107,7 +107,7 @@ if (isset($_SESSION['idusers'])) {
     <li><button onclick="login()" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Login</button></li>
  </ul>  <div class="popup" id="popupSignup">
 <button class="popClose" onclick="signup(true)">X</button>
-<form id="signupForm" method="post" action="sign-up.php">
+<form id="signupForm" method="post" action="../sign-up.php">
   <h2>Sign Up</h2>
   <input type="text" name="username" placeholder="Username" required>
   <input type="email" name="email" placeholder="Email" required>
@@ -119,7 +119,7 @@ if (isset($_SESSION['idusers'])) {
 </div>
 <div class="popup" id="popupLogin">
 <button class="popClose" onclick="login(true)">X</button>
-<form id="loginForm" method="post" action="login.php">
+<form id="loginForm" method="post" action="../login.php">
   <h2>Login</h2>
   <input type="email" name="email" placeholder="Email" required>
   <div id="pasdiv" class="pasdiv"><input type="password" name="password" placeholder="Password" id="logpas"
@@ -158,7 +158,7 @@ if (isset($_SESSION['idusers'])) {
     echo "<p>No other things found in the other things.</p>";
   }
   echo '
-  <footer><p style="color:white;">Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
+  <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" target="_blank" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
 </body>
 </html>';
