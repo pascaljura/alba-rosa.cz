@@ -115,14 +115,8 @@ if (isset($_SESSION['idusers'])) {
 
   echo '</div> <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;" target="_blank"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
-  <a><script language="JavaScript" type="text/javascript" charset="utf-8">
-  <!--
-  document.write("<img src="https://toplist.cz/dot.asp?id=1811308&http="+
-  encodeURIComponent(document.referrer)+"&t="+encodeURIComponent(document.title)+"&l="+encodeURIComponent(document.URL)+
-  "&wi="+encodeURIComponent(window.screen.width)+"&he="+encodeURIComponent(window.screen.height)+"&cd="+
-  encodeURIComponent(window.screen.colorDepth)+"" width="1" height="1" border=0 alt="TOPlist" />");
-  //--></script><noscript><img src="https://toplist.cz/dot.asp?id=1811308&njs=1" border="0"
-  alt="TOPlist" width="1" height="1" /></noscript></a>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KF6CNR83B8"></script>
+  <script src="../assets/script.js"></script>
   </body>
 </html>';
   exit();
