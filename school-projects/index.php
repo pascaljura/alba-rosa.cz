@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('../assets/config.php');
+include('../assets/config.php');
 if (isset($_SESSION['idusers'])) {
   // Získání idusers z session
   $idusers = $_SESSION['idusers'];
@@ -20,24 +20,6 @@ if (isset($_SESSION['idusers'])) {
     echo 'Chyba při provádění dotazu na jméno uživatele: ' . $conn->error;
   }
 
-  // Dotaz na databázi pro získání školského přístupu na základě idusers
-  $query_school_access = "SELECT school_access FROM users_alba_rosa WHERE idusers = ?";
-  $stmt_school_access = $conn->prepare($query_school_access);
-  $stmt_school_access->bind_param("i", $idusers);
-  $stmt_school_access->execute();
-  $result_school_access = $stmt_school_access->get_result();
-
-  if ($result_school_access) {
-    if ($result_school_access->num_rows > 0) {
-      $row_school_access = $result_school_access->fetch_assoc();
-      $school_access = $row_school_access['school_access'];
-    } else {
-      $school_access = 0;
-    }
-    mysqli_free_result($result_school_access);
-  } else {
-    echo 'Chyba při provádění dotazu na školský přístup: ' . $conn->error;
-  }
 
   echo '
   <!DOCTYPE html>
@@ -67,20 +49,19 @@ if (isset($_SESSION['idusers'])) {
   <div>';
   echo "
     <h1>Welcome to School projects, $username!</h1>";
-  if ($school_access == 1) {
-    $query = "SELECT * FROM school_alba_rosa";
-    $result = $conn->query($query);
-    if ($result->num_rows > 0) {
-      echo '
+  $query = "SELECT * FROM school_alba_rosa";
+  $result = $conn->query($query);
+  if ($result->num_rows > 0) {
+    echo '
       <p>Here you can find the latest school projects.</p>
             </div><div class="showcont">';
-      while ($row = $result->fetch_assoc()) {
-        $icon = $row['icon'];
-        $name = $row['name'];
-        $description = $row['description'];
-        $web = $row['web'];
-        $github = $row['github'];
-        echo '
+    while ($row = $result->fetch_assoc()) {
+      $icon = $row['icon'];
+      $name = $row['name'];
+      $description = $row['description'];
+      $web = $row['web'];
+      $github = $row['github'];
+      echo '
         <div class="show" id="projshow">
             <div class="button-text">
                 <h2>' . $icon . '' . $name . '</h2>
@@ -91,24 +72,15 @@ if (isset($_SESSION['idusers'])) {
                 <button class="project-button" onclick="window.open(\'' . $github . '\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
             </div>
         </div>';
-      }
-    } else {
-      echo "<p>No school projects found in the school projects.</p>";
     }
   } else {
-    echo '<p>Sorry, you don\'t have access :D</p>';
+    echo "<p>No school projects found in the school projects.</p>";
   }
   echo '
   <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" target="_blank" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
-  <a><script language="JavaScript" type="text/javascript" charset="utf-8">
-  <!--
-  document.write("<img src="https://toplist.cz/dot.asp?id=1811308&http="+
-  encodeURIComponent(document.referrer)+"&t="+encodeURIComponent(document.title)+"&l="+encodeURIComponent(document.URL)+
-  "&wi="+encodeURIComponent(window.screen.width)+"&he="+encodeURIComponent(window.screen.height)+"&cd="+
-  encodeURIComponent(window.screen.colorDepth)+"" width="1" height="1" border=0 alt="TOPlist" />");
-  //--></script><noscript><img src="https://toplist.cz/dot.asp?id=1811308&njs=1" border="0"
-  alt="TOPlist" width="1" height="1" /></noscript></a>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-KF6CNR83B8"></script>
+ <script src="../assets/script.js"></script>
   </body>
 </html>';
   exit();
