@@ -112,29 +112,34 @@ if (isset($_SESSION['idusers'])) {
     <li><button onclick="login()" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
 
-  <div class="popup" id="popupSignup">
-  <button class="popClose" onclick="signup(true)">X</button>
-  <form id="signupForm" method="post" action="../sign-up.php">
-    <h2>Sign Up</h2>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <div id="pasdiv" class="pasdiv"><input type="password" name="password" placeholder="Password" id="signpas"
-        required><button onclick="passhow(document.getElementById("signpas"))" class="swbtn"><img
-          src="../assets/eye.png"></button></div>
-    <input type="submit" class="submitbtn" value="Sign Up">
-  </form>
-</div>
-<div class="popup" id="popupLogin">
-  <button class="popClose" onclick="login(true)">X</button>
-  <form id="loginForm" method="post" action="../login.php">
-    <h2>Login</h2>
-    <input type="email" name="email" placeholder="Email" required>
-    <div id="pasdiv" class="pasdiv"><input type="password" name="password" placeholder="Password" id="logpas"
-        required><button onclick="passhow(document.getElementById("logpas"))" class="swbtn"><img
-          src="../assets/eye.png"></button></div>
-    <input type="submit" class="submitbtn" value="Login">
-  </form>
-</div>  <div>';
+    <div class="popup" id="popupSignup">
+    <button class="popClose" onclick="signup(true)">X</button>
+    <form id="signupForm" method="post" action="sign-up.php">
+      <h2>Sign Up</h2>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <div class="form-input-wrapper">
+        <input type="password" class="form-input password-input" id="signpas" name="password" placeholder="1234"
+          required>
+        <span class="toggle-password" id="toggle_pwd_sign" onclick="togglePassword_sign()"><i
+            class="fa fa-eye"></i></span></input>
+      </div><br>
+      <input type="submit" class="submitbtn" value="Sign Up">
+    </form>
+  </div>
+  <div class="popup" id="popupLogin">
+    <button class="popClose" onclick="login(true)">X</button>
+    <form id="loginForm" method="post" action="login.php">
+      <h2>Login</h2>
+      <input type="email" name="email" placeholder="Email" required>
+      <div class="form-input-wrapper">
+        <input type="password" class="form-input password-input" id="logpas" name="password" placeholder="1234"
+          required>
+        <span class="toggle-password" id="toggle_pwd_log" onclick="togglePassword_log()"><i class="fa fa-eye"></i></span>
+      </div><br>
+      <input type="submit" class="submitbtn" value="Login">
+    </form>
+  </div> <div>';
   echo "
     <h1>Welcome to School projects!</h1>";
   $query = "SELECT * FROM school_alba_rosa";
@@ -150,13 +155,12 @@ if (isset($_SESSION['idusers'])) {
       $web = $row['web'];
       $github = $row['github'];
       echo '
-        <div class="show" id="projshow">
+        <div class="show" id="projshow"  onclick="window.open(\'' . $web . '\', \'_blank\');" style="cursor: pointer;">
             <div class="button-text">
                 <h2>' . $icon . '' . $name . '</h2>
                 <h>' . $description . '</h>
             </div>
             <div class="button-container">
-                <button class="project-button" onclick="window.open(\'' . $web . '\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
                 <button class="project-button" onclick="window.open(\'' . $github . '\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
             </div>
         </div>';

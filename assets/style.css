@@ -58,7 +58,8 @@ li button:hover {
 .fa-solid,
 .fa-regular,
 .fa-brands,
-.fa, .far {
+.fa,
+.far {
   padding-right: 5px;
 }
 
@@ -91,7 +92,7 @@ p {
 
 .svitch,
 .popClose,
-.popup input[type='submit'],
+.popup input[type="submit"],
 .svbtn {
   background-color: #007acc;
   color: white;
@@ -194,7 +195,6 @@ p {
   margin-left: 10px;
 }
 
-
 .showcont {
   display: flex;
   justify-content: space-evenly;
@@ -231,7 +231,6 @@ footer p {
 }
 
 @media (max-width: 600px) {
-
   .showcont {
     flex-direction: column;
     align-items: center;
@@ -270,4 +269,22 @@ footer p {
     margin-top: 10px;
     position: sticky;
   }
+}
+.form-input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.password-input {
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 40px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }

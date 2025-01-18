@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('../assets/config.php');
+include('../assets/config.php');
 if (isset($_SESSION['idusers'])) {
   $idusers = $_SESSION['idusers'];
   $query = "SELECT username FROM users_alba_rosa WHERE idusers = $idusers";
@@ -61,13 +61,12 @@ if (isset($_SESSION['idusers'])) {
       $web = $row['web'];
       $github = $row['github'];
       echo '
-      <div class="show" id="projshow">
+      <div class="show" id="projshow" onclick="window.open(\'' . $web . '\', \'_blank\');" style="cursor: pointer;">
           <div class="button-text">
               <h2>' . $icon . '' . $name . '</h2>
               <h>' . $description . '</h>
           </div>
           <div class="button-container">
-              <button class="project-button" onclick="window.open(\'' . $web . '\', \'_blank\');"><i class="fa-solid fa-up-right-from-square"></i>Web</button>
               <button class="project-button" onclick="window.open(\'' . $github . '\', \'_blank\');"><i class="fa-brands fa-github"></i>GitHub</button>
           </div>
       </div>';
