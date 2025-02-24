@@ -5,7 +5,8 @@ if (isset($_SESSION['idusers'])) {
   $query = "SELECT username FROM users_alba_rosa WHERE idusers = $idusers";
   $result = mysqli_query($conn, $query);
   if ($result) { // Získáme řádek s výsledkem dotazu
-    $row = mysqli_fetch_assoc($result); // Získáme jméno uživatele z výsledku dotazu $username=$row['username']; // Uvolníme výsledek dotazu mysqli_free_result($result); } else { echo 'Chyba při provádění dotazu: ' . mysqli_error($conn); }
+    $row = mysqli_fetch_assoc($result); // Získáme jméno uživatele z výsledku dotazu 
+    $username = $row['username']; // Uvolníme výsledek dotazu mysqli_free_result($result); } else { echo 'Chyba při provádění dotazu: ' . mysqli_error($conn); }
     echo "";
     echo '<!DOCTYPE html>
 <html lang="en">
@@ -136,7 +137,8 @@ if (isset($_SESSION['idusers'])) {
       <div class="form-input-wrapper">
         <input type="password" class="form-input password-input" id="logpas" name="password" placeholder="1234"
           required>
-        <span class="toggle-password" id="toggle_pwd_log" onclick="togglePassword_log()"><i class="fa fa-eye"></i></span>
+        <span class="toggle-password" id="toggle_pwd_log" onclick="togglePassword_log()"><i
+            class="fa fa-eye"></i></span>
       </div>
       <input type="submit" class="submitbtn" value="Login">
     </form>
