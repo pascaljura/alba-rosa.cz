@@ -112,7 +112,7 @@ if (isset($_SESSION['idusers'])) {
   </div>
   <div class="popup" id="popupLogin">
     <button class="popClose" onclick="login(true)">X</button>
-    <form id="loginForm" method="post" action="login.php">
+    <form id="loginForm" method="post" action="../login.php">
       <h2>Login</h2>
       <input type="email" name="email" placeholder="Email" required>
       <div class="form-input-wrapper">
