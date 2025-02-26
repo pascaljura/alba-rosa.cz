@@ -14,19 +14,17 @@ if (isset($_SESSION['idusers'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/style.css">
-  <link rel="shortcut icon_sign_sign" href="./assets/icon_sign_sign.ico" type="image/x-icon_sign_sign">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="shortcut icon" href="../assets/icon.ico" type="image/x-icon">
   <title>Alba-rosa.cz</title>
-  <meta name="author" content=\' Jiří Boucník & Matěj Kořalka\'>
+  <meta name="author" content=\'Jiří Boucník & Matěj Kořalka\'>
   <meta name="application-name" content="Alba-rosa.cz">
-  <meta name="description"
-    content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
+  <meta name="description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
   <meta property="og:title" content="Alba-rosa.cz">
-  <meta property="og:description"
-    content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
-  <meta property="og:image" content="https://alba-rosa.cz/assets/icon_sign_sign.ico">
+  <meta property="og:description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
+  <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
-  </head>
+</head>
 
   <body>
     <ul class="navbar">
