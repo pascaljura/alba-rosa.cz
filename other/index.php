@@ -5,6 +5,21 @@ include('../assets/config.php');
 if (isset($_SESSION['idusers'])) {
   $idusers = $_SESSION['idusers'];
   $username = $_SESSION['username'];
+  $idusers = $_SESSION['idusers'];
+  $query = "SELECT username FROM users_alba_rosa WHERE idusers = $idusers";
+  $result = mysqli_query($conn, $query);
+  if ($result) {
+    // Získáme řádek s výsledkem dotazu
+    $row = mysqli_fetch_assoc($result);
+
+    // Získáme jméno uživatele z výsledku dotazu
+    $username = $row['username'];
+
+    // Uvolníme výsledek dotazu
+    mysqli_free_result($result);
+  } else {
+    echo 'Chyba při provádění dotazu: ' . mysqli_error($conn);
+  }
   echo '
   <!DOCTYPE html>
 <html lang="en">
