@@ -24,6 +24,8 @@ if (isset($_SESSION['idusers'])) {
   <meta property="og:description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
   <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
+  crossorigin="anonymous"></script>
 </head>
 
   <body>
@@ -171,8 +173,7 @@ if (isset($_SESSION['idusers'])) {
           class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj
       Kořalka | &#169; 2024</p>
   </footer>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
-    crossorigin="anonymous"></script>
+
   <script src="./assets/script.js"></script>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KF6CNR83B8"></script>
