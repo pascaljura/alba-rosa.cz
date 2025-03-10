@@ -46,7 +46,18 @@ if (isset($_SESSION['idusers'])) {
   <li><a href="../gamehub/"><i class="fas fa-gamepad"></i> GameHub</a></li>
   <li><a href="../other/" class="active"><i class="fas fa-project-diagram"></i> Other</a></li>
   <li><button onclick="location.href=\'../logout.php\'" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
-</ul>
+</ul><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
+     crossorigin="anonymous"></script>
+<!-- Alba-rosa.cz -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8345853981011942"
+     data-ad-slot="6725019001"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
   <div>';
   echo "
     <h1>Welcome to Other, $username!</h1>";
@@ -114,7 +125,18 @@ if (isset($_SESSION['idusers'])) {
   <li><a href="../other/" class="active"><i class="fas fa-project-diagram"></i> Other</a></li>
   <li><button onclick="signup()" style="cursor: pointer;"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Login</button></li>
- </ul>    <div class="popup" id="popupSignup">
+ </ul>  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
+     crossorigin="anonymous"></script>
+<!-- Alba-rosa.cz -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8345853981011942"
+     data-ad-slot="6725019001"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>  <div class="popup" id="popupSignup">
     <button class="popClose" onclick="signup(true)">X</button>
     <form id="signupForm" method="post" action="sign-up.php">
       <h2>Sign Up</h2>

@@ -48,6 +48,18 @@ if (isset($_SESSION['idusers'])) {
   <li><a href="../other/"><i class="fas fa-project-diagram"></i> Other</a></li>
   <li><button onclick="location.href=\'../logout.php\'" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
 </ul>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
+     crossorigin="anonymous"></script>
+<!-- Alba-rosa.cz -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8345853981011942"
+     data-ad-slot="6725019001"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
   <div>';
   echo "
     <h1>Welcome to School projects, $username!</h1>";
@@ -115,7 +127,18 @@ if (isset($_SESSION['idusers'])) {
   <li><button onclick="signup()" style="cursor: pointer;"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
+     crossorigin="anonymous"></script>
+<!-- Alba-rosa.cz -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8345853981011942"
+     data-ad-slot="6725019001"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     <div class="popup" id="popupSignup">
     <button class="popClose" onclick="signup(true)">X</button>
     <form id="signupForm" method="post" action="sign-up.php">

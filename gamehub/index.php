@@ -45,7 +45,18 @@ if (isset($_SESSION['idusers'])) {
   <li><a href="../gamehub/"  class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
   <li><a href="../other/"><i class="fas fa-project-diagram"></i> Other</a></li>
   <li><button onclick="location.href=\'../logout.php\'" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
-</ul>
+</ul><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
+     crossorigin="anonymous"></script>
+<!-- Alba-rosa.cz -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8345853981011942"
+     data-ad-slot="6725019001"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
   <!-- Úvodní text -->
   <div>';
   echo "
