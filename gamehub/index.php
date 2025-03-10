@@ -34,6 +34,8 @@ if (isset($_SESSION['idusers'])) {
 <meta property="og:description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
 <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
 <meta property="og:image:type" content="image/ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Menu -->
