@@ -34,8 +34,6 @@ if (isset($_SESSION['idusers'])) {
 <meta property="og:description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
 <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
 <meta property="og:image:type" content="image/ico">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
-  crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Menu -->
@@ -45,18 +43,7 @@ if (isset($_SESSION['idusers'])) {
   <li><a href="../gamehub/"  class="active"><i class="fas fa-gamepad"></i> GameHub</a></li>
   <li><a href="../other/"><i class="fas fa-project-diagram"></i> Other</a></li>
   <li><button onclick="location.href=\'../logout.php\'" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
-</ul><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
-     crossorigin="anonymous"></script>
-<!-- Alba-rosa.cz -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8345853981011942"
-     data-ad-slot="6725019001"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</ul>
   <!-- Úvodní text -->
   <div>';
   echo "
@@ -128,7 +115,6 @@ if (isset($_SESSION['idusers'])) {
 
   echo '</div> <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" style="color: white;" target="_blank"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KF6CNR83B8"></script>
   <script src="../assets/script.js"></script>
   </body>
 </html>';

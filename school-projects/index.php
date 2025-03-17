@@ -37,8 +37,6 @@ if (isset($_SESSION['idusers'])) {
   <meta property="og:description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
   <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
-  crossorigin="anonymous"></script>
 </head>
 <body>
 <ul class="navbar">
@@ -48,18 +46,6 @@ if (isset($_SESSION['idusers'])) {
   <li><a href="../other/"><i class="fas fa-project-diagram"></i> Other</a></li>
   <li><button onclick="location.href=\'../logout.php\'" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Logout</button></li>
 </ul>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
-     crossorigin="anonymous"></script>
-<!-- Alba-rosa.cz -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8345853981011942"
-     data-ad-slot="6725019001"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
   <div>';
   echo "
     <h1>Welcome to School projects, $username!</h1>";
@@ -93,7 +79,6 @@ if (isset($_SESSION['idusers'])) {
   echo '
   <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" target="_blank" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-KF6CNR83B8"></script>
  <script src="../assets/script.js"></script>
   </body>
 </html>';
@@ -116,8 +101,6 @@ if (isset($_SESSION['idusers'])) {
   <meta property="og:description" content="Our community is mainly made up of high school students interested in programming. We participate in the projects we share here (and elsewhere), and you, too, can share your projects here.">
   <meta property="og:image" content="https://alba-rosa.cz/assets/icon.ico">
   <meta property="og:image:type" content="image/ico">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
-  crossorigin="anonymous"></script>
 </head>
 <body>
 <ul class="navbar">
@@ -127,18 +110,7 @@ if (isset($_SESSION['idusers'])) {
   <li><button onclick="signup()" style="cursor: pointer;"><i class="fas fa-user-plus"></i> Sign Up</button></li>
     <li><button onclick="login()" style="cursor: pointer;"><i class="fas fa-sign-in-alt"></i> Login</button></li>
   </ul>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8345853981011942"
-     crossorigin="anonymous"></script>
 <!-- Alba-rosa.cz -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8345853981011942"
-     data-ad-slot="6725019001"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
     <div class="popup" id="popupSignup">
     <button class="popClose" onclick="signup(true)">X</button>
     <form id="signupForm" method="post" action="sign-up.php">
@@ -204,7 +176,6 @@ if (isset($_SESSION['idusers'])) {
 </div>
   <footer><p style="color:white;"><a href="https://discord.gg/ZeHnED2BCG" target="_blank" style="color: white;"><i class="fa-brands fa-discord"></i></a> | Jiří Boucník &#38; Matěj Kořalka | &#169; 2024</p></footer>
   <script src="https://kit.fontawesome.com/865012b7e6.js" crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KF6CNR83B8"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>';
