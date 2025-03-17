@@ -38,6 +38,9 @@ if (isset($_SESSION['idusers'])) {
 <meta property="og:image:type" content="image/ico">
 </head>
 <body>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-8345853981011942">
+</amp-auto-ads>
   <!-- Menu -->
   <ul class="navbar">
   <li><a href="../"><i class="fas fa-home"></i> Home</a></li>

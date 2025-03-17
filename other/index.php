@@ -40,6 +40,9 @@ if (isset($_SESSION['idusers'])) {
   <meta property="og:image:type" content="image/ico">
 </head>
 <body>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-8345853981011942">
+</amp-auto-ads>
 <ul class="navbar">
   <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
   <li><a href="../school-projects/"><i class="fa-solid fa-school"></i> School projects</a></li>
@@ -106,6 +109,9 @@ if (isset($_SESSION['idusers'])) {
   <meta property="og:image:type" content="image/ico">
 </head>
 <body>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-8345853981011942">
+</amp-auto-ads>
 <ul class="navbar">
   <li><a href="../" ><i class="fas fa-home"></i> Home</a></li>
   <li><a href="../school-projects/"><i class="fa-solid fa-school"></i> School projects</a></li>
