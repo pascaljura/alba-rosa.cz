@@ -4,7 +4,6 @@ include('../assets/config.php');
 
 if (isset($_SESSION['idusers'])) {
   $idusers = $_SESSION['idusers'];
-  $username = $_SESSION['username'];
   $idusers = $_SESSION['idusers'];
   $query = "SELECT username FROM users_alba_rosa WHERE idusers = $idusers";
   $result = mysqli_query($conn, $query);
